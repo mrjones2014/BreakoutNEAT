@@ -1,18 +1,24 @@
 import pygame
-import numpy
 from game_params import *
 
 
 class paddle(object):
     def __init__(self):
-        self.image = pygame.image.load("assets/bat.png")
+        self.image = pygame.image.load("../assets/bat.png")
         self.hitbox = self.image.get_rect()
+        self.hitbox = self.hitbox.move(self.hitbox.left, height - self.hitbox.bottom)
 
     def move_left(self):
-        self.hitbox.move(self.hitbox.x - paddle_speed, self.hitbox.y)
+        if self.hitbox.left > 0:
+            self.hitbox.center = (self.hitbox.center[0] - paddle_speed, self.hitbox.center[1])
+        if self.hitbox.left < 0:
+            self.hitbox.center = (0, self.hitbox.center[1])
 
     def move_right(self):
-        self.hitbox.move(self.hitbox.x + paddle_speed, self.hitbox.y)
+        if self.hitbox.right < width:
+            self.hitbox.center = (self.hitbox.center[0] + paddle_speed, self.hitbox.center[1])
+        while self.hitbox.right > width:
+            self.hitbox.center = (self.hitbox.center[0] - 1, self.hitbox.center[1])
 
     def reflect_ball_if_hit(self, ball):
         if self.hitbox.top <= ball.hitbox.bottom <= self.hitbox.bottom and ball.hitbox.right >= self.hitbox.left and \
