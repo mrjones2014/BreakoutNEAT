@@ -2,7 +2,7 @@ import pygame
 from game_params import *
 
 
-class paddle(object):
+class Paddle(object):
     def __init__(self):
         self.image = pygame.image.load("../assets/bat.png")
         self.hitbox = self.image.get_rect()

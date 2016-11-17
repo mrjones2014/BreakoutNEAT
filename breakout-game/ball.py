@@ -3,7 +3,7 @@ import numpy
 from game_params import *
 
 
-class ball(object):
+class Ball(object):
     def __init__(self, x=0, y=0):
         self.image = pygame.image.load("../assets/ball.png")
         self.hitbox = self.image.get_rect()

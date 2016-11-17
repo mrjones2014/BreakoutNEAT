@@ -1,24 +1,22 @@
 import pygame
-from paddle import paddle
-from ball import ball
-from wall import wall
+from paddle import Paddle
+from ball import Ball
+from wall import Wall
 from game_params import *
-from brick import brick
 import random
-import sys
 
 
-class breakout(object):
+class Breakout(object):
     def __init__(self, screen):
-        self.paddle = paddle()
+        self.paddle = Paddle()
         self.paddle.hitbox.move((width / 2) - (self.paddle.hitbox.right / 2), height - 20)
-        self.ball = ball()
+        self.ball = Ball()
         self.ball.hitbox.center = (width / 2, height / 2)
         self.init_ball_xspeed = 6
         self.init_ball_yspeed = 6
         self.ball.dx = self.init_ball_xspeed
         self.ball.dy = self.init_ball_yspeed
-        self.wall = wall(width)
+        self.wall = Wall(width)
         self.score = 0
         self.lives = lives
         self.screen = screen

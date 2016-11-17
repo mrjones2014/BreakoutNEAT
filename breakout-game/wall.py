@@ -1,11 +1,11 @@
-from brick import brick
+from brick import Brick
 
 
-class wall(object):
+class Wall(object):
     def __init__(self, width):
         self.bricks = []
-        self.brick_length = brick().hitbox.right - brick().hitbox.left
-        self.brick_height = brick().hitbox.bottom - brick().hitbox.top
+        self.brick_length = Brick().hitbox.right - Brick().hitbox.left
+        self.brick_height = Brick().hitbox.bottom - Brick().hitbox.top
         self.build_wall(width)
 
     def build_wall(self, width):
@@ -20,7 +20,7 @@ class wall(object):
                     adj = 0
                 xpos = -adj
                 ypos += self.brick_height
-            new_brick = brick()
+            new_brick = Brick()
             self.bricks.append(new_brick)
             self.bricks[i].hitbox = self.bricks[i].hitbox.move(xpos, ypos)
             xpos = xpos + self.brick_length

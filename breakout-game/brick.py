@@ -1,7 +1,7 @@
 import pygame
 
 
-class brick(object):
+class Brick(object):
     def __init__(self):
         self.image = pygame.image.load("../assets/brick.png")
         self.hitbox = self.image.get_rect()

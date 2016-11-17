@@ -1,5 +1,5 @@
 import pygame
-from breakout import breakout
+from breakout import Breakout
 from game_params import *
 import sys
 
@@ -7,7 +7,7 @@ pygame.init()
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((width, height))
 pygame.key.set_repeat(1, 30)
-game = breakout(screen)
+game = Breakout(screen)
 while 1:
     clock.tick(60)
     for event in pygame.event.get():
