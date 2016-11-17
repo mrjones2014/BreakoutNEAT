@@ -1,18 +1,19 @@
 from brick import Brick
+from game_params import *
 
 
 class Wall(object):
-    def __init__(self, width):
+    def __init__(self):
         self.bricks = []
         self.brick_length = Brick().hitbox.right - Brick().hitbox.left
         self.brick_height = Brick().hitbox.bottom - Brick().hitbox.top
         self.build_wall(width)
 
-    def build_wall(self, width):
+    def build_wall(self):
         xpos = 0
         ypos = 60
         adj = 0
-        for i in range(0, 52):
+        for i in range(0, num_bricks):
             if xpos > width:
                 if adj == 0:
                     adj = self.brick_length / 2

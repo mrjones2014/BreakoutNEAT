@@ -1,4 +1,5 @@
-max_weight = 1.0
-min_weight = -1.0
+MAX_WEIGHT = 1.0
+MIN_WEIGHT = -1.0
 TYPE_INPUT = 0
 TYPE_OUTPUT = 1
+INDIVIDUALS_PER_GENERATION = 20

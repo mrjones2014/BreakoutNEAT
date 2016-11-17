@@ -2,13 +2,13 @@ import uuid
 
 
 class Species(object):
-    def __init__(self, genome, breakout_model):
-        self.genome = genome
+    def __init__(self, generation, breakout_model):
+        self.genome = generation
         self.inputs = []
         self.outputs = []
         self.breakout_model = breakout_model
-        # species id format: species-genome:{self.genome}-{uuid}
-        self.id = "species-genome:" + self.genome + "-" + uuid.uuid4()
+        # species id format: species-generation:{self.generation}-{uuid}
+        self.id = "species-generation:" + self.genome + "-" + uuid.uuid4()
         self.fitness = 0
 
     def num_inputs(self):

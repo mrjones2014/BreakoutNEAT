@@ -28,3 +28,6 @@ class Brick(object):
                     ball.dx = -5
 
             self.broken = True
+
+    def get_center(self):
+        return self.hitbox.center

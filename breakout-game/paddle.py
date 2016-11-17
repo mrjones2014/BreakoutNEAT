@@ -42,3 +42,6 @@ class Paddle(object):
             return True
         else:
             return False
+
+    def get_center(self):
+        return self.hitbox.center

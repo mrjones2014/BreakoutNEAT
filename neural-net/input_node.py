@@ -8,4 +8,5 @@ class InputNode(Node):
         self.weight = self.update_func()
 
     def update_weight(self):
-        self.weight += (self.update_func() * self.get_sum_connections_weight())
+        if self.update_func:
+            self.weight += (self.update_func() * self.get_sum_connections_weight())
