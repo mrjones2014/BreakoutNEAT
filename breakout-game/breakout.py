@@ -8,6 +8,9 @@ import random
 
 class Breakout(object):
     def __init__(self, screen):
+        self.num_times_hit_paddle = 0
+        self.game_over = False
+        self.time = 0
         self.paddle = Paddle()
         self.paddle.hitbox.move((width / 2) - (self.paddle.hitbox.right / 2), height - 20)
         self.ball = Ball()
@@ -23,6 +26,8 @@ class Breakout(object):
         self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
 
     def update(self):
+        if not self.game_over:
+            self.time += 1
         if self.ball.hitbox.top > height and self.lives > 0:
             self.lives -= 1
             self.ball.dx = self.init_ball_xspeed
@@ -40,13 +45,16 @@ class Breakout(object):
                 else:
                     self.ball.dy *= -1
                 self.wall.bricks[index:index + 1] = []
-                self.score += 10
+                self.score += 1
 
-            self.paddle.reflect_ball_if_hit(self.ball)
+            hit_paddle = self.paddle.reflect_ball_if_hit(self.ball)
+            if hit_paddle:
+                self.num_times_hit_paddle += 1
             self.ball.move()
 
         self.screen.fill(bgcolor)
         if self.lives <= 0:
+            self.game_over = True
             msgrect = self.game_over_msg.get_rect()
             msgrect = msgrect.move(width / 2 - (msgrect.center[0]), height / 3)
             self.screen.blit(self.game_over_msg, msgrect)

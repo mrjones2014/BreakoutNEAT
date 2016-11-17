@@ -30,3 +30,6 @@ class Wall(object):
         for i in range(0, len(self.bricks)):
             hitboxes.append(self.bricks[i].hitbox)
         return hitboxes
+
+    def get_num_bricks(self):
+        return len(self.bricks)
