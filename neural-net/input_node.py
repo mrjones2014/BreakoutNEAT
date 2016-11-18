@@ -10,3 +10,9 @@ class InputNode(Node):
     def update_weight(self):
         if self.update_func:
             self.weight += (self.update_func() * self.get_sum_connections_weight())
+
+    def is_same(self, other):
+        if self.update_func == other.update_func:
+            return True
+        else:
+            return False

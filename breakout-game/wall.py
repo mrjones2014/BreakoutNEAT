@@ -7,7 +7,7 @@ class Wall(object):
         self.bricks = []
         self.brick_length = Brick().hitbox.right - Brick().hitbox.left
         self.brick_height = Brick().hitbox.bottom - Brick().hitbox.top
-        self.build_wall(width)
+        self.build_wall()
 
     def build_wall(self):
         xpos = 0

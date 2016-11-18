@@ -19,9 +19,9 @@ class Breakout(object):
         self.init_ball_yspeed = 6
         self.ball.dx = self.init_ball_xspeed
         self.ball.dy = self.init_ball_yspeed
-        self.wall = Wall(width)
+        self.wall = Wall()
         self.score = 0
-        self.lives = lives
+        self.lives = init_lives
         self.screen = screen
         self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
 
@@ -71,10 +71,13 @@ class Breakout(object):
             self.screen.blit(self.wall.bricks[i].image, self.wall.bricks[i].hitbox)
 
         if not self.wall.bricks:
-            self.wall.build_wall(width)
+            self.wall.build_wall()
             self.ball.dx = self.init_ball_xspeed
             self.ball.dy = self.init_ball_yspeed
             self.ball.hitbox.center = width / 2, height / 3
 
         self.screen.blit(self.ball.image, self.ball.hitbox)
         self.screen.blit(self.paddle.image, self.paddle.hitbox)
+
+    def reset(self):
+        self.__init__(self.screen)

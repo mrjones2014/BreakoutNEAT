@@ -9,3 +9,14 @@ class Connection(object):
         self.output = output_node
         input_node.add_connection(self)
         output_node.add_connection(self)
+
+    def is_same(self, other):
+        """
+        Determine whether this connection is unique or the same as the connection provided as a parameter.
+        :param other: Connection to check uniqueness against.
+        :return: True if connection is *NOT* unique, False if it *IS* unique.
+        """
+        if self.input == other.input and self.output == other.output:
+            return True
+        else:
+            return False
