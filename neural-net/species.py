@@ -39,7 +39,7 @@ class Species(object):
     def init_connections(self):
         """
         Assign random connections for a random number of nodes.
-        :return:
+        :return: void
         """
         num_conns_to_make = random.randint(0, 2 * len(self.inputs))
         for i in range(0, num_conns_to_make):

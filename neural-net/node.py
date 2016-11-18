@@ -8,6 +8,10 @@ class Node(object):
         self.connections = []
 
     def get_sum_connections_weight(self):
+        """
+        Get the sum of the weights of all connections connected to this Node.
+        :return: the sum of Connection weights.
+        """
         total = 0.0
         for conn in self.connections:
             total += conn.weight
