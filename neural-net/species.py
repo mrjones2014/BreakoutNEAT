@@ -1,6 +1,7 @@
 import uuid
 import random
 from connection import Connection
+from output_node import OutputNode
 
 
 class Species(object):
@@ -50,9 +51,32 @@ class Species(object):
 
     def get_all_connections(self):
         """
-        Get all the connections associate with this specimen.
+        Get all the connections associated with this specimen.
         :return: the list of all connections associated with this specimen.
         """
         conns = []
         for input_node in self.inputs:
             conns.extend(input_node.connections)
+
+    def update_all_node_weights(self):
+        """
+        Calls update on each input and output node of this species.
+        :return:
+        """
+        for input_node in self.inputs:
+            input_node.update_weight()
+        for output_node in self.outputs:
+            output_node.update_weight()
+
+    def act(self):
+        """
+        Calls act() on the output node with the greatest resultant weight.
+        :return: void
+        """
+        self.update_all_node_weights()
+        prevailing_output = sorted(self.outputs, cmp=self.node_weight_comparator)[0]
+        prevailing_output.act()
+
+    @staticmethod
+    def node_weight_comparator(n1, n2):
+        return n1.weight - n2.weight
