@@ -2,6 +2,8 @@ from output_node import OutputNode
 from input_node import InputNode
 from neural_net_params import *
 from species import Species
+import copy
+import pygame
 
 
 class Generation(object):
@@ -70,13 +72,40 @@ class Generation(object):
         return self.evolved_child
 
     def run_and_evaluate(self):
+        self.breakout_model.reset()
         for individual in self.individuals:
             while not self.breakout_model.game_over:
                 individual.update_all_node_weights()
                 individual.act()
                 self.breakout_model.update()
+                pygame.display.flip()
             individual.calculate_fitness()
             self.breakout_model.reset()
+        self.epoch()
+
+    def evolve_from_ancestor(self, ancestor):
+        """
+        Evolve into a new generation from a "seed" individual.
+        The generation's evolved child should be passed as an ancestor after the Epoch.
+        :param ancestor: the ancestor individual to evolve a new generation from.
+        :return: the next, evolved generation
+        """
+        next_gen = Generation(self.breakout_model, self.number + 1)
+        next_gen.breakout_model.reset()
+        next_gen.individuals = []
+        next_gen.epoch_occurred = False
+        next_gen.evolved_child = None
+        for i in range(0, NUM_INDIVIDUALS_PER_GENERATION):
+            individual = copy.deepcopy(ancestor)
+            next_gen.init_individual(individual)
+            next_gen.individuals.append(individual)
+        return next_gen
+
+    def avg_fitness(self):
+        total = 0
+        for individual in self.individuals:
+            total += individual.calculate_fitness()
+        return total / len(self.individuals)
 
     @staticmethod
     def compare_individuals(ind_1, ind_2):

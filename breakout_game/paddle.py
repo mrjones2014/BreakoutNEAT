@@ -13,12 +13,14 @@ class Paddle(object):
             self.hitbox.center = (self.hitbox.center[0] - paddle_speed, self.hitbox.center[1])
         if self.hitbox.left < 0:
             self.hitbox.center = (0, self.hitbox.center[1])
+        return self.hitbox.center[0]
 
     def move_right(self):
         if self.hitbox.right < width:
             self.hitbox.center = (self.hitbox.center[0] + paddle_speed, self.hitbox.center[1])
         while self.hitbox.right > width:
             self.hitbox.center = (self.hitbox.center[0] - 1, self.hitbox.center[1])
+        return self.hitbox.center[0]
 
     def reflect_ball_if_hit(self, ball):
         if self.hitbox.top <= ball.hitbox.bottom <= self.hitbox.bottom and ball.hitbox.right >= self.hitbox.left and \

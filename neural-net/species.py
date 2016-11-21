@@ -1,7 +1,6 @@
 import uuid
 import random
 from connection import Connection
-from output_node import OutputNode
 
 
 class Species(object):
@@ -11,7 +10,7 @@ class Species(object):
         self.outputs = []
         self.breakout_model = breakout_model
         # species id format: species-generation:{self.generation}-{uuid}
-        self.id = "species-generation:" + self.genome + "-" + uuid.uuid4()
+        self.id = "species-generation:" + str(self.genome) + "-" + str(uuid.uuid4())
         self.fitness = 0
 
     def add_input(self, input_node):
@@ -44,8 +43,8 @@ class Species(object):
         """
         num_conns_to_make = random.randint(0, 2 * len(self.inputs))
         for i in range(0, num_conns_to_make):
-            input_index = random.randint(0, len(self.inputs))
-            output_index = random.randint() % 2
+            input_index = random.randint(0, len(self.inputs) - 1)
+            output_index = random.randint(0, 100) % 2
             # Connection __init__ function adds itself to the connections list for the specified input and output nodes
             Connection(self.inputs[input_index], self.outputs[output_index])
 

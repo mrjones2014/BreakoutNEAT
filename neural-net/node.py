@@ -4,7 +4,7 @@ import uuid
 class Node(object):
     def __init__(self):
         # node id format: node-{uuid}
-        self.id = "node-" + uuid.uuid4()
+        self.id = "node-" + str(uuid.uuid4())
         self.connections = []
 
     def get_sum_connections_weight(self):
