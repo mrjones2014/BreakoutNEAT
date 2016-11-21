@@ -69,6 +69,15 @@ class Generation(object):
         self.breakout_model.reset()
         return self.evolved_child
 
+    def run_and_evaluate(self):
+        for individual in self.individuals:
+            while not self.breakout_model.game_over:
+                individual.update_all_node_weights()
+                individual.act()
+                self.breakout_model.update()
+            individual.calculate_fitness()
+            self.breakout_model.reset()
+
     @staticmethod
     def compare_individuals(ind_1, ind_2):
         """
