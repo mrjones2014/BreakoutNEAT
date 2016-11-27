@@ -2,8 +2,9 @@ from output_node import OutputNode
 from input_node import InputNode
 from neural_net_params import *
 from species import Species
-import copy
+import time
 import pygame
+import sys
 
 
 class Generation(object):
@@ -14,7 +15,7 @@ class Generation(object):
         self.epoch_occurred = False
         self.evolved_child = None
         for i in range(0, NUM_INDIVIDUALS_PER_GENERATION):
-            individual = Species(self.number, self.breakout_model)
+            individual = Species(self.number, i, self.breakout_model)
             self.init_individual(individual)
             self.individuals.append(individual)
 
@@ -26,9 +27,11 @@ class Generation(object):
         """
         for brick in self.breakout_model.wall.bricks:
             individual.add_input(InputNode(brick.get_center))
-        individual.add_input(InputNode(self.breakout_model.paddle.get_center))
+        individual.set_inputs([
+            InputNode(self.breakout_model.paddle_center), InputNode(self.breakout_model.get_ball_center)
+        ])
         individual.set_outputs([
-            OutputNode(self.breakout_model.paddle.move_left()), OutputNode(self.breakout_model.paddle.move_right())
+            OutputNode(self.breakout_model.move_paddle_left), OutputNode(self.breakout_model.move_paddle_right)
         ])
         individual.init_connections()
 
@@ -52,7 +55,7 @@ class Generation(object):
         s1_conns = specimen_1.get_all_connections()
         s2_conns = specimen_2.get_all_connections()
         new_connections = Generation.breed_connections(s1_conns, s2_conns)
-        self.evolved_child = Species(self.number + 1, self.breakout_model)
+        self.evolved_child = Species(self.number + 1, 0, self.breakout_model)
         for conn in new_connections:
             input_is_duplicate = False
             output_is_duplicate = False
@@ -66,7 +69,7 @@ class Generation(object):
                 self.evolved_child.add_input(conn.input)
             if not output_is_duplicate:
                 self.evolved_child.add_output(conn.output)
-        self.evolved_child.init_connections()
+        self.evolved_child.mutate()
         self.epoch_occurred = True
         self.breakout_model.reset()
         return self.evolved_child
@@ -75,11 +78,16 @@ class Generation(object):
         self.breakout_model.reset()
         for individual in self.individuals:
             while not self.breakout_model.game_over:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        pygame.quit()
+                        sys.exit()
                 individual.update_all_node_weights()
                 individual.act()
                 self.breakout_model.update()
                 pygame.display.flip()
             individual.calculate_fitness()
+            print "        ", individual.id, " fitness =", individual.fitness
             self.breakout_model.reset()
         self.epoch()
 
@@ -96,16 +104,16 @@ class Generation(object):
         next_gen.epoch_occurred = False
         next_gen.evolved_child = None
         for i in range(0, NUM_INDIVIDUALS_PER_GENERATION):
-            individual = copy.deepcopy(ancestor)
+            individual = Species.copy(self.number + 1, i, ancestor)
             next_gen.init_individual(individual)
             next_gen.individuals.append(individual)
         return next_gen
 
     def avg_fitness(self):
-        total = 0
+        total = 0.0
         for individual in self.individuals:
             total += individual.calculate_fitness()
-        return total / len(self.individuals)
+        return total / float(len(self.individuals))
 
     @staticmethod
     def compare_individuals(ind_1, ind_2):
@@ -115,7 +123,7 @@ class Generation(object):
         :param ind_2: specimen 2 to compare
         :return: the integer resulting from comparing the two specimens
         """
-        return ind_1.fitness - ind_2.fitness
+        return int(ind_1.fitness - ind_2.fitness)
 
     @staticmethod
     def breed_connections(s1_conns, s2_conns):

@@ -6,7 +6,7 @@ class Paddle(object):
     def __init__(self):
         self.image = pygame.image.load("../assets/bat.png")
         self.hitbox = self.image.get_rect()
-        self.hitbox = self.hitbox.move(self.hitbox.left, height - self.hitbox.bottom)
+        self.hitbox = self.hitbox.move((width / 2) - (self.hitbox.right / 2), height - self.hitbox.bottom)
 
     def move_left(self):
         if self.hitbox.left > 0:

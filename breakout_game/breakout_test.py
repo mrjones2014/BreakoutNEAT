@@ -22,6 +22,8 @@ while 1:
                 game.paddle.move_left()
             if event.key == pygame.K_RIGHT:
                 game.paddle.move_right()
+            if event.key == pygame.K_r:
+                game.reset()
     game.update()
     pygame.display.flip()
 

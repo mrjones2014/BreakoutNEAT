@@ -26,7 +26,6 @@ class Brick(object):
                     ball.dx = -6
                 elif ball.dx < -17:
                     ball.dx = -5
-
             self.broken = True
 
     def get_center(self):
