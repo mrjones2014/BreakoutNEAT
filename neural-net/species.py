@@ -1,7 +1,9 @@
+from __future__ import division
 from neural_net_params import *
 import random
 from connection import Connection
 import numpy
+from decimal import Decimal
 
 
 class Species(object):
@@ -14,6 +16,7 @@ class Species(object):
         # species id format: species-generation:{self.generation}-{self.individual_number}
         self.id = "species#generation:" + str(self.genome) + "-individual:" + str(self.individual_number)
         self.fitness = 0.0
+        self.fitness = Decimal(self.fitness)
 
     def add_input(self, input_node):
         self.inputs.append(input_node)
@@ -35,11 +38,11 @@ class Species(object):
 
     def calculate_fitness(self):
         if self.breakout_model.num_times_hit_paddle > 0:
-            self.fitness = (self.breakout_model.score * numpy.log10(self.breakout_model.num_times_hit_paddle))
+            self.fitness = Decimal(self.breakout_model.score * (self.breakout_model.score / self.breakout_model.num_times_hit_paddle))
         else:
-            self.fitness = float(self.breakout_model.score)
+            self.fitness = Decimal(self.breakout_model.score)
         if self.breakout_model.avg_paddle_offset != 0:
-            self.fitness /= numpy.log10(self.breakout_model.avg_paddle_offset)
+            self.fitness /= Decimal(numpy.log10(self.breakout_model.avg_paddle_offset))
         '''log = numpy.log10(self.breakout_model.num_times_hit_paddle)
         print log
         if log != 0:

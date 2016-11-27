@@ -1,3 +1,4 @@
+from __future__ import division
 from neural_net_params import *
 from breakout_game.breakout import Breakout
 from breakout_game.game_params import *

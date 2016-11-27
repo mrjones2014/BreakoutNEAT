@@ -1,3 +1,4 @@
+from __future__ import division
 import random
 from neural_net_params import *
 

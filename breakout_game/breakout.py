@@ -1,3 +1,4 @@
+from __future__ import division
 import pygame
 from paddle import Paddle
 from ball import Ball
@@ -27,9 +28,21 @@ class Breakout(object):
         self.total_paddle_offset = 0
         self.screen = screen
         self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
+        self.stale = False
+        self.stale_frame_count = 0
+        self.prev_ball_location = None
 
     def update(self):
         if not self.game_over:
+            if self.prev_ball_location is not None:
+                if numpy.abs(self.prev_ball_location[0] - self.ball.hitbox.center[0]) < 5 \
+                        or numpy.abs(self.prev_ball_location[1] - self.ball.hitbox.center[1]) < 5:
+                    self.stale_frame_count += 1
+                else:
+                    self.stale_frame_count = 0
+            if self.stale_frame_count > max_stale_frames:
+                self.game_over = True
+            self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
             self.total_paddle_offset += (width / 2) - self.paddle_center()[0]
             self.avg_paddle_offset = numpy.abs(self.total_paddle_offset) / self.time

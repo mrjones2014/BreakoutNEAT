@@ -1,8 +1,9 @@
+from __future__ import division
 from output_node import OutputNode
 from input_node import InputNode
 from neural_net_params import *
 from species import Species
-import time
+from decimal import Decimal
 import pygame
 import sys
 
@@ -25,8 +26,8 @@ class Generation(object):
         :param individual: specimen to initialize.
         :return: void
         """
-        for brick in self.breakout_model.wall.bricks:
-            individual.add_input(InputNode(brick.get_center))
+        #for brick in self.breakout_model.wall.bricks:
+        #    individual.add_input(InputNode(brick.get_center))
         individual.set_inputs([
             InputNode(self.breakout_model.paddle_center), InputNode(self.breakout_model.get_ball_center)
         ])
@@ -111,9 +112,10 @@ class Generation(object):
 
     def avg_fitness(self):
         total = 0.0
+        total = Decimal(total)
         for individual in self.individuals:
-            total += individual.calculate_fitness()
-        return total / float(len(self.individuals))
+            total += Decimal(individual.calculate_fitness())
+        return Decimal(total / Decimal(len(self.individuals)))
 
     @staticmethod
     def compare_individuals(ind_1, ind_2):
