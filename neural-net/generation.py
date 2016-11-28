@@ -38,7 +38,6 @@ class Generation(object):
         """
         Trigger an Epoch event; meant to be called at the end of a generation's last individual's game.
         Determine and breed the two most fit individuals and return the evolved child.
-        Also resets the Breakout game model.
         :return: the child evolved from breeding the two most fit individuals in the generation.
         """
         # if the epoch has already happened, the evolved child has already been created; return it.
