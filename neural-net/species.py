@@ -4,6 +4,7 @@ import random
 from connection import Connection
 import numpy
 from decimal import Decimal
+from lxml import etree
 
 
 class Species(object):
@@ -114,6 +115,30 @@ class Species(object):
             self.outputs[0].do_act()
         else:
             self.outputs[1].do_act()
+
+    def save_state(self, filename_without_extension):
+        filename = filename_without_extension + ".species"
+        root = etree.Element("species")
+        genome = etree.Element("genome")
+        genome.text = str(self.genome)
+        root.append(genome)
+        conns = etree.Element("connection_list")
+
+        for conn in self.get_all_connections():
+            conn_node = etree.Element("connection")
+            in_node = etree.Element("input")
+            input_index = self.inputs.index(conn.input)
+            in_node.text = str(input_index)
+            out_node = etree.Element("output")
+            output_index = self.outputs.index(conn.output)
+            out_node.text = str(output_index)
+            conn_node.append(in_node)
+            conn_node.append(out_node)
+            conns.append(conn_node)
+        root.append(conns)
+        xml_str = etree.tostring(root, pretty_print=True)
+        with open(filename, "w") as species_file:
+            species_file.write(xml_str)
 
     @staticmethod
     def node_weight_comparator(n1, n2):
