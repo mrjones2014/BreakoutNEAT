@@ -26,8 +26,6 @@ class Generation(object):
         :param individual: specimen to initialize.
         :return: void
         """
-        #for brick in self.breakout_model.wall.bricks:
-        #    individual.add_input(InputNode(brick.get_center))
         individual.set_inputs([
             InputNode(self.breakout_model.paddle_center), InputNode(self.breakout_model.get_ball_center)
         ])
@@ -90,7 +88,6 @@ class Generation(object):
             individual.calculate_fitness()
             print "        ", individual.id, " fitness =", individual.fitness
             self.breakout_model.reset()
-        self.epoch()
 
     def evolve_from_ancestor(self, ancestor):
         """
@@ -114,7 +111,7 @@ class Generation(object):
         total = 0.0
         total = Decimal(total)
         for individual in self.individuals:
-            total += Decimal(individual.calculate_fitness())
+            total += Decimal(individual.fitness)
         return Decimal(total / Decimal(len(self.individuals)))
 
     @staticmethod

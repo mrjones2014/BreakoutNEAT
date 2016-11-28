@@ -37,16 +37,9 @@ class Species(object):
         return len(self.outputs)
 
     def calculate_fitness(self):
-        if self.breakout_model.num_times_hit_paddle > 0:
-            self.fitness = Decimal(self.breakout_model.score * (self.breakout_model.score / self.breakout_model.num_times_hit_paddle))
-        else:
-            self.fitness = Decimal(self.breakout_model.score)
+        self.fitness = self.breakout_model.score
         if self.breakout_model.avg_paddle_offset != 0:
-            self.fitness /= Decimal(numpy.log10(self.breakout_model.avg_paddle_offset))
-        '''log = numpy.log10(self.breakout_model.num_times_hit_paddle)
-        print log
-        if log != 0:
-            self.fitness /= log'''
+            self.fitness -= numpy.log10(self.breakout_model.avg_paddle_offset) * 0.1
         return self.fitness
 
     def init_connections(self):
