@@ -27,10 +27,10 @@ class Generation(object):
         :return: void
         """
         individual.set_inputs([
-            InputNode(self.breakout_model.paddle_center), InputNode(self.breakout_model.get_ball_center)
+            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center, 1)
         ])
         individual.set_outputs([
-            OutputNode(self.breakout_model.move_paddle_left), OutputNode(self.breakout_model.move_paddle_right)
+            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1)
         ])
         individual.init_connections()
 

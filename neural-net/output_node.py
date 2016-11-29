@@ -6,11 +6,12 @@ from neural_net_params import *
 
 
 class OutputNode(Node):
-    def __init__(self, act_function):
+    def __init__(self, act_function, index=-1):
         super(OutputNode, self).__init__()
         self.act_function = act_function
         self.weight = 0.0
         self.update_weight()
+        self.index = index
 
     def update_weight(self):
         total = 0.0

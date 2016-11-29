@@ -5,10 +5,11 @@ from neural_net_params import *
 
 
 class InputNode(Node):
-    def __init__(self, input_update_function):
+    def __init__(self, input_update_function, index=-1):
         super(InputNode, self).__init__()
         self.update_func = input_update_function
         self.weight = self.update_func()[0]
+        self.index = index
 
     def update_weight(self):
         if self.update_func:

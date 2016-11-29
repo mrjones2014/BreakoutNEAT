@@ -4,6 +4,7 @@ from breakout_game.breakout import Breakout
 from breakout_game.game_params import *
 import pygame
 from generation import Generation
+from species import Species
 
 
 class Experiment(object):
@@ -22,20 +23,20 @@ class Experiment(object):
         first_ancestor = first_gen.epoch()
         curr_gen = first_gen.evolve_from_ancestor(first_ancestor)
         print "Average fitness in generation 1: " + str(curr_gen.avg_fitness())
-        last_individual = first_ancestor
+        last_individual_xml = first_ancestor.to_xml_str()
         for i in range(1, NUM_GENERATIONS):
             print "Running generation " + str(i) + "..."
             curr_gen.run_and_evaluate()
             print "    Average fitness in generation " + str(i) + ": " + str(curr_gen.avg_fitness())
             next_ancestor = curr_gen.epoch()
-            last_individual = next_ancestor
+            last_individual_xml = next_ancestor.to_xml_str()
             next_gen = curr_gen.evolve_from_ancestor(next_ancestor)
             curr_gen = next_gen
         save_to_file = raw_input("Save speciation data (y/n): ")
         if save_to_file == "y" or save_to_file == "Y":
             filename = raw_input("Enter filename, without file extension: ")
             print "Writing speciation data to " + filename + ".species..."
-            last_individual.save_state(filename)
+            Species.save_state(filename, last_individual_xml)
             print "Done."
 
 if __name__ == "__main__":

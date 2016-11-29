@@ -116,8 +116,7 @@ class Species(object):
         else:
             self.outputs[1].do_act()
 
-    def save_state(self, filename_without_extension):
-        filename = filename_without_extension + ".species"
+    def to_xml_str(self):
         root = etree.Element("species")
         genome = etree.Element("genome")
         genome.text = str(self.genome)
@@ -126,17 +125,26 @@ class Species(object):
 
         for conn in self.get_all_connections():
             conn_node = etree.Element("connection")
+
             in_node = etree.Element("input")
-            input_index = self.inputs.index(conn.input)
-            in_node.text = str(input_index)
+            in_node.text = str(conn.input.index)
+
             out_node = etree.Element("output")
-            output_index = self.outputs.index(conn.output)
-            out_node.text = str(output_index)
+            out_node.text = str(conn.output.index)
+
             conn_node.append(in_node)
             conn_node.append(out_node)
+
             conns.append(conn_node)
+
         root.append(conns)
+
         xml_str = etree.tostring(root, pretty_print=True)
+        return xml_str
+
+    @staticmethod
+    def save_state(filename_without_extension, xml_str):
+        filename = "../speciation_data/" + filename_without_extension + ".species"
         with open(filename, "w") as species_file:
             species_file.write(xml_str)
 
