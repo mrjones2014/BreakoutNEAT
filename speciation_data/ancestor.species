@@ -1,0 +1,37 @@
+<species>
+  <genome>5</genome>
+  <connection_list>
+    <connection>
+      <input>0</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>0</input>
+      <output>0</output>
+    </connection>
+    <connection>
+      <input>0</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>1</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>1</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>2</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>0</output>
+    </connection>
+  </connection_list>
+</species>
