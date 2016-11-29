@@ -2,7 +2,6 @@ from __future__ import division
 from neural_net_params import *
 import random
 from connection import Connection
-import numpy
 from decimal import Decimal
 from lxml import etree
 from input_node import InputNode

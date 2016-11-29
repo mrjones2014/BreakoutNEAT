@@ -1,7 +1,5 @@
 from __future__ import division
 from node import Node
-import numpy
-from neural_net_params import *
 
 
 class InputNode(Node):
