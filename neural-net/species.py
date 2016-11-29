@@ -45,8 +45,8 @@ class Species(object):
             self.fitness += self.breakout_model.num_times_hit_paddle / 10
         else:
             self.fitness -= 0.5
-        if self.breakout_model.avg_paddle_offset != 0:
-            self.fitness -= (1 / self.breakout_model.avg_paddle_offset) * 100
+        if self.breakout_model.avg_paddle_offset_from_ball != 0:
+            self.fitness -= (1 / self.breakout_model.avg_paddle_offset_from_ball) * 100
         for hits in self.breakout_model.hits_per_life:
             if hits == 0:
                 self.fitness -= 0.2
@@ -186,7 +186,8 @@ class Species(object):
             InputNode(breakout_model.get_ball_dx, 2), InputNode(breakout_model.get_ball_dy, 3)
         ])
         new_spec.set_outputs([
-            OutputNode(breakout_model.move_paddle_left, 0), OutputNode(breakout_model.move_paddle_right, 1)
+            OutputNode(breakout_model.move_paddle_left, 0), OutputNode(breakout_model.move_paddle_right, 1),
+            OutputNode(breakout_model.move_paddle_none, 2)
         ])
 
         for conn_xml in conn_list:

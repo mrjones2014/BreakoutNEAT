@@ -18,15 +18,15 @@ class Breakout(object):
         self.paddle.hitbox.move((width / 2) - (self.paddle.hitbox.right / 2), height - 20)
         self.ball = Ball()
         self.ball.hitbox.center = (width / 2, height / 2)
-        self.init_ball_xspeed = 4
-        self.init_ball_yspeed = 4
-        self.ball.dx = self.init_ball_xspeed
-        self.ball.dy = self.init_ball_yspeed
+        self.init_ball_x_speed = 4
+        self.init_ball_y_speed = 4
+        self.ball.dx = self.init_ball_x_speed
+        self.ball.dy = self.init_ball_y_speed
         self.wall = Wall()
         self.score = 0
         self.lives = init_lives
-        self.avg_paddle_offset = 0
-        self.total_paddle_offset = 0
+        self.avg_paddle_offset_from_ball = 0
+        self.total_paddle_offset_from_ball = 0
         self.screen = screen
         self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
         self.stale = False
@@ -42,11 +42,12 @@ class Breakout(object):
                 else:
                     self.stale_frame_count = 0
             if self.stale_frame_count > max_stale_frames:
+                self.stale = True
                 self.game_over = True
             self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
-            self.total_paddle_offset += (width / 2) - self.paddle_center()[0]
-            self.avg_paddle_offset = numpy.abs(self.total_paddle_offset) / self.time
+            self.total_paddle_offset_from_ball += numpy.abs(self.ball.hitbox.center[0] - self.paddle_center()[0])
+            self.avg_paddle_offset_from_ball = self.total_paddle_offset_from_ball / self.time
         if self.ball.hitbox.top > height and self.lives > 0:
             index = init_lives - self.lives
             self.lives -= 1
@@ -54,10 +55,10 @@ class Breakout(object):
                 self.hits_per_life.append(self.num_times_hit_paddle)
             else:
                 self.hits_per_life.append(self.num_times_hit_paddle - self.hits_per_life[index - 1])
-            self.ball.dx = self.init_ball_xspeed
+            self.ball.dx = self.init_ball_x_speed
             if random.random() > 0.5:
                 self.ball.dx *= -1
-            self.ball.dy = self.init_ball_yspeed
+            self.ball.dy = self.init_ball_y_speed
             if self.lives > 0:
                 self.ball.hitbox.center = width * random.random(), height / 3
         if self.lives > 0:
@@ -79,25 +80,25 @@ class Breakout(object):
         self.screen.fill(bgcolor)
         if self.lives <= 0:
             self.game_over = True
-            msgrect = self.game_over_msg.get_rect()
-            msgrect = msgrect.move(width / 2 - (msgrect.center[0]), height / 3)
-            self.screen.blit(self.game_over_msg, msgrect)
+            msg_rect = self.game_over_msg.get_rect()
+            msg_rect = msg_rect.move(width / 2 - (msg_rect.center[0]), height / 3)
+            self.screen.blit(self.game_over_msg, msg_rect)
         lives_msg = pygame.font.Font(None, 40).render("Lives: " + str(self.lives), True, (0, 255, 255), bgcolor)
         lives_msg_rect = lives_msg.get_rect()
         lives_msg_rect = lives_msg_rect.move(0, 0)
         self.screen.blit(lives_msg, lives_msg_rect)
-        scoretext = pygame.font.Font(None, 40).render("Score: " + str(self.score), True, (0, 255, 255), bgcolor)
-        scoretextrect = scoretext.get_rect()
-        scoretextrect = scoretextrect.move(width - scoretextrect.right, 0)
-        self.screen.blit(scoretext, scoretextrect)
+        score_text = pygame.font.Font(None, 40).render("Score: " + str(self.score), True, (0, 255, 255), bgcolor)
+        score_text_rect = score_text.get_rect()
+        score_text_rect = score_text_rect.move(width - score_text_rect.right, 0)
+        self.screen.blit(score_text, score_text_rect)
 
         for i in range(0, len(self.wall.bricks)):
             self.screen.blit(self.wall.bricks[i].image, self.wall.bricks[i].hitbox)
 
         if not self.wall.bricks:
             self.wall.build_wall()
-            self.ball.dx = self.init_ball_xspeed
-            self.ball.dy = self.init_ball_yspeed
+            self.ball.dx = self.init_ball_x_speed
+            self.ball.dy = self.init_ball_y_speed
             self.ball.hitbox.center = width / 2, height / 3
             self.paddle.__init__()
 
@@ -109,6 +110,9 @@ class Breakout(object):
 
     def move_paddle_left(self):
         self.paddle.move_left()
+
+    def move_paddle_none(self):
+        self.paddle.get_center()
 
     def paddle_center(self):
         return self.paddle.hitbox.center

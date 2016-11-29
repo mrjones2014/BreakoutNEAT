@@ -31,7 +31,8 @@ class Generation(object):
             InputNode(self.breakout_model.get_ball_dx, 2), InputNode(self.breakout_model.get_ball_dy, 3)
         ])
         individual.set_outputs([
-            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1)
+            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1),
+            OutputNode(self.breakout_model.move_paddle_none, 2)
         ])
         individual.init_connections()
 

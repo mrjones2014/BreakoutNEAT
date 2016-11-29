@@ -1,4 +1,4 @@
-paddle_speed = 20
+paddle_speed = 10
 brick_rows = 4
 width, height = 640, 480
 init_lives = 4
