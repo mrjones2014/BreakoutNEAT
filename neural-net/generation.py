@@ -27,7 +27,8 @@ class Generation(object):
         :return: void
         """
         individual.set_inputs([
-            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center, 1)
+            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center, 1),
+            InputNode(self.breakout_model.get_ball_dx, 2), InputNode(self.breakout_model.get_ball_dy, 3)
         ])
         individual.set_outputs([
             OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1)
@@ -73,7 +74,7 @@ class Generation(object):
         self.breakout_model.reset()
         return self.evolved_child
 
-    def run_and_evaluate(self):
+    def run_and_evaluate(self, logger):
         self.breakout_model.reset()
         for individual in self.individuals:
             while not self.breakout_model.game_over:
@@ -86,7 +87,7 @@ class Generation(object):
                 self.breakout_model.update()
                 pygame.display.flip()
             individual.calculate_fitness()
-            print "        ", individual.id, " fitness =", individual.fitness
+            logger.log("        " + str(individual.id) + " fitness = " + str(individual.fitness))
             self.breakout_model.reset()
 
     def evolve_from_ancestor(self, ancestor):

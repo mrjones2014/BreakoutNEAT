@@ -11,6 +11,7 @@ import numpy
 class Breakout(object):
     def __init__(self, screen):
         self.num_times_hit_paddle = 0
+        self.hits_per_life = []
         self.game_over = False
         self.time = 0
         self.paddle = Paddle()
@@ -47,7 +48,12 @@ class Breakout(object):
             self.total_paddle_offset += (width / 2) - self.paddle_center()[0]
             self.avg_paddle_offset = numpy.abs(self.total_paddle_offset) / self.time
         if self.ball.hitbox.top > height and self.lives > 0:
+            index = init_lives - self.lives
             self.lives -= 1
+            if index == 0:
+                self.hits_per_life.append(self.num_times_hit_paddle)
+            else:
+                self.hits_per_life.append(self.num_times_hit_paddle - self.hits_per_life[index - 1])
             self.ball.dx = self.init_ball_xspeed
             if random.random() > 0.5:
                 self.ball.dx *= -1
@@ -109,6 +115,12 @@ class Breakout(object):
 
     def get_ball_center(self):
         return self.ball.hitbox.center
+
+    def get_ball_dx(self):
+        return self.ball.dx, self.ball.dy
+
+    def get_ball_dy(self):
+        return self.ball.dy, self.ball.dx
 
     def reset(self):
         self.__init__(self.screen)

@@ -41,8 +41,17 @@ class Species(object):
 
     def calculate_fitness(self):
         self.fitness = self.breakout_model.score
+        if self.breakout_model.num_times_hit_paddle != 0:
+            self.fitness += self.breakout_model.num_times_hit_paddle / 10
+        else:
+            self.fitness -= 0.5
         if self.breakout_model.avg_paddle_offset != 0:
-            self.fitness -= numpy.log10(self.breakout_model.avg_paddle_offset) * 0.1
+            self.fitness -= (1 / self.breakout_model.avg_paddle_offset) * 100
+        for hits in self.breakout_model.hits_per_life:
+            if hits == 0:
+                self.fitness -= 0.2
+        if self.breakout_model.stale:
+            self.fitness = 0 - self.fitness
         return self.fitness
 
     def init_connections(self):
@@ -173,7 +182,8 @@ class Species(object):
         new_spec = Species(genome, 0, breakout_model)
         conn_list = root.find("connection_list").findall("connection")
         new_spec.set_inputs([
-            InputNode(breakout_model.paddle_center, 0), InputNode(breakout_model.get_ball_center, 1)
+            InputNode(breakout_model.paddle_center, 0), InputNode(breakout_model.get_ball_center, 1),
+            InputNode(breakout_model.get_ball_dx, 2), InputNode(breakout_model.get_ball_dy, 3)
         ])
         new_spec.set_outputs([
             OutputNode(breakout_model.move_paddle_left, 0), OutputNode(breakout_model.move_paddle_right, 1)
