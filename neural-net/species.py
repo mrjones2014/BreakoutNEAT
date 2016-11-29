@@ -5,6 +5,8 @@ from connection import Connection
 import numpy
 from decimal import Decimal
 from lxml import etree
+from input_node import InputNode
+from output_node import OutputNode
 
 
 class Species(object):
@@ -143,8 +145,11 @@ class Species(object):
         return xml_str
 
     @staticmethod
-    def save_state(filename_without_extension, xml_str):
-        filename = "../speciation_data/" + filename_without_extension + ".species"
+    def save_state(filename, xml_str):
+        if not filename.endswith(".species"):
+            filename += ".species"
+        if not filename.startswith(DATA_DIR):
+            filename = DATA_DIR + filename
         with open(filename, "w") as species_file:
             species_file.write(xml_str)
 
@@ -160,3 +165,22 @@ class Species(object):
         new_species.id = "species#generation:" + str(genome) + "-individual:" + str(individual_num)
         new_species.fitness = 0
         return new_species
+
+    @staticmethod
+    def parse(ancestor_xml, breakout_model):
+        root = etree.fromstring(ancestor_xml)
+        genome = int(root.find("genome").text)
+        new_spec = Species(genome, 0, breakout_model)
+        conn_list = root.find("connection_list").findall("connection")
+        new_spec.set_inputs([
+            InputNode(breakout_model.paddle_center, 0), InputNode(breakout_model.get_ball_center, 1)
+        ])
+        new_spec.set_outputs([
+            OutputNode(breakout_model.move_paddle_left, 0), OutputNode(breakout_model.move_paddle_right, 1)
+        ])
+
+        for conn_xml in conn_list:
+            input_index = int(conn_xml.find("input").text)
+            output_index = int(conn_xml.find("output").text)
+            Connection(new_spec.inputs[input_index], new_spec.outputs[output_index])
+        return new_spec

@@ -142,3 +142,16 @@ class Generation(object):
             if not is_duplicate:
                 connections.append(conn1)
         return connections
+
+    @staticmethod
+    def seed(ancestor, generation_num):
+        new_gen = Generation(ancestor.breakout_model, generation_num)
+        new_gen.number = generation_num
+        new_gen.individuals = []
+        new_gen.breakout_model = ancestor.breakout_model
+        new_gen.epoch_occurred = False
+        new_gen.evolved_child = None
+        for i in range(0, NUM_INDIVIDUALS_PER_GENERATION):
+            individual = Species.copy(generation_num, ancestor.individual_number, ancestor)
+            new_gen.init_individual(individual)
+            new_gen.individuals.append(individual)
