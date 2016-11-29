@@ -10,8 +10,8 @@ import numpy
 
 class Breakout(object):
     def __init__(self, screen):
-        self.num_times_hit_paddle = 0
-        self.hits_per_life = []
+        # fields needed for the game itself
+        self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
         self.game_over = False
         self.time = 0
         self.paddle = Paddle()
@@ -25,10 +25,15 @@ class Breakout(object):
         self.wall = Wall()
         self.score = 0
         self.lives = init_lives
+
+        # additional data for the fitness evaluation
         self.avg_paddle_offset_from_ball = 0
         self.total_paddle_offset_from_ball = 0
+        self.total_paddle_offset_from_center = 0
+        self.avg_paddle_offset_from_center = 0
         self.screen = screen
-        self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
+        self.num_times_hit_paddle = 0
+        self.hits_per_life = []
         self.stale = False
         self.stale_frame_count = 0
         self.prev_ball_location = None
@@ -46,8 +51,13 @@ class Breakout(object):
                 self.game_over = True
             self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
+
             self.total_paddle_offset_from_ball += numpy.abs(self.ball.hitbox.center[0] - self.paddle_center()[0])
             self.avg_paddle_offset_from_ball = self.total_paddle_offset_from_ball / self.time
+
+            self.total_paddle_offset_from_center += numpy.abs((width / 2) - self.paddle_center()[0])
+            self.avg_paddle_offset_from_center = self.total_paddle_offset_from_center / self.time
+
         if self.ball.hitbox.top > height and self.lives > 0:
             index = init_lives - self.lives
             self.lives -= 1
