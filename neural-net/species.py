@@ -61,7 +61,7 @@ class Species(object):
         num_conns_to_make = random.randint(0, 2 * len(self.inputs))
         for i in range(0, num_conns_to_make):
             input_index = random.randint(0, len(self.inputs) - 1)
-            output_index = random.randint(0, 100) % 2
+            output_index = random.randint(0, len(self.outputs) - 1)
             # Connection __init__ function adds itself to the connections list for the specified input and output nodes
             Connection(self.inputs[input_index], self.outputs[output_index])
 
@@ -106,7 +106,7 @@ class Species(object):
         mutate_new_connection = random.uniform(0, 100) % 20 == 0
         if mutate_new_connection:
             input_index = random.randint(0, len(self.inputs) - 1)
-            output_index = random.randint(0, 100) % len(self.outputs)
+            output_index = random.randint(0, len(self.outputs) - 1)
             Connection(self.inputs[input_index], self.outputs[output_index])
             if bool(random.getrandbits(1)):
                 input_index = random.randint(0, len(self.inputs) - 1)
