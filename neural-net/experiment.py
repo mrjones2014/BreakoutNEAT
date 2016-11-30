@@ -35,15 +35,15 @@ class Experiment(object):
         first_gen.run_and_evaluate(self.logger)
         self.logger.log("    Average fitness in generation 0: " + str(first_gen.avg_fitness()))
         first_ancestor = first_gen.epoch()
+        self.logger.log("    Highest fitness in generation 0: " + str(first_gen.highest_fitness))
         curr_gen = first_gen.evolve_from_ancestor(first_ancestor)
-        self.logger.log("Average fitness in generation 1: " + str(curr_gen.avg_fitness()))
         last_individual_xml = first_ancestor.to_xml_str()
         for i in range(1, NUM_GENERATIONS):
             self.logger.log("Running generation " + str(i) + "...")
             curr_gen.run_and_evaluate(self.logger)
             self.logger.log("    Average fitness in generation " + str(i) + ": " + str(curr_gen.avg_fitness()))
             next_ancestor = curr_gen.epoch()
-            self.logger.log("    Highest fitness in generation " + str(i) + ": " + str(next_ancestor.fitness))
+            self.logger.log("    Highest fitness in generation " + str(i) + ": " + str(curr_gen.highest_fitness))
             if self.current_best_species is None or next_ancestor.fitness > self.current_best_species.fitness:
                 self.current_best_species = next_ancestor
             last_individual_xml = next_ancestor.to_xml_str()

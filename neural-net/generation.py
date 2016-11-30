@@ -10,6 +10,7 @@ import sys
 
 class Generation(object):
     def __init__(self, breakout_model, generation_num):
+        self.highest_fitness = None
         self.number = generation_num
         self.individuals = []
         self.breakout_model = breakout_model
@@ -88,6 +89,8 @@ class Generation(object):
                 self.breakout_model.update()
                 pygame.display.flip()
             individual.calculate_fitness()
+            if self.highest_fitness is None or individual.fitness > self.highest_fitness:
+                self.highest_fitness = individual.fitness
             logger.log("        " + str(individual.id) + " fitness = " + str(individual.fitness))
             self.breakout_model.reset()
 

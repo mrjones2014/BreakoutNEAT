@@ -2,16 +2,12 @@
   <genome>50</genome>
   <connection_list>
     <connection>
-      <input>1</input>
+      <input>0</input>
       <output>0</output>
     </connection>
     <connection>
       <input>2</input>
-      <output>0</output>
-    </connection>
-    <connection>
-      <input>2</input>
-      <output>0</output>
+      <output>1</output>
     </connection>
     <connection>
       <input>2</input>
@@ -24,6 +20,22 @@
     <connection>
       <input>3</input>
       <output>1</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>1</input>
+      <output>0</output>
     </connection>
   </connection_list>
 </species>
