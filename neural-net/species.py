@@ -106,7 +106,7 @@ class Species(object):
         mutate_new_connection = random.uniform(0, 100) % 20 == 0
         if mutate_new_connection:
             input_index = random.randint(0, len(self.inputs) - 1)
-            output_index = random.randint(0, 100) % 2
+            output_index = random.randint(0, 100) % len(self.outputs)
             Connection(self.inputs[input_index], self.outputs[output_index])
             if bool(random.getrandbits(1)):
                 input_index = random.randint(0, len(self.inputs) - 1)

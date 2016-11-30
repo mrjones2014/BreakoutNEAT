@@ -20,11 +20,11 @@ class Experiment(object):
         self.logger = None
         self.current_best_species = None
 
-    def initialize(self, logger):
+    def initialize(self, event_logger):
         self.screen = pygame.display.set_mode((width, height))
         pygame.display.set_caption(WINDOW_TITLE)
         self.breakout_game = Breakout(self.screen)
-        self.logger = logger
+        self.logger = event_logger
 
     def run(self, seed_gen=None):
         self.logger.log("Running generation 0...")
@@ -43,6 +43,7 @@ class Experiment(object):
             curr_gen.run_and_evaluate(self.logger)
             self.logger.log("    Average fitness in generation " + str(i) + ": " + str(curr_gen.avg_fitness()))
             next_ancestor = curr_gen.epoch()
+            self.logger.log("    Highest fitness in generation " + str(i) + ": " + str(next_ancestor.fitness))
             if self.current_best_species is None or next_ancestor.fitness > self.current_best_species.fitness:
                 self.current_best_species = next_ancestor
             last_individual_xml = next_ancestor.to_xml_str()
