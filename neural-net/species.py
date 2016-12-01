@@ -64,13 +64,13 @@ class Species(object):
 
     def init_nodes(self):
         self.set_inputs([
-            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center, 1),
-            InputNode(self.breakout_model.get_ball_dx, 2), InputNode(self.breakout_model.get_ball_dy, 3),
-            InputNode(self.breakout_model.get_ball_velocity_magnitude, 4)
+            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center_x, 1),
+            InputNode(self.breakout_model.get_ball_center_y, 2), InputNode(self.breakout_model.get_ball_dx, 3),
+            InputNode(self.breakout_model.get_ball_dy, 4), InputNode(self.breakout_model.get_ball_velocity_magnitude, 5)
         ])
         self.set_outputs([
-            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_none, 1),
-            OutputNode(self.breakout_model.move_paddle_right, 2)
+            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1),
+            OutputNode(self.breakout_model.move_paddle_none, 2)
         ])
 
     def init_connections(self):

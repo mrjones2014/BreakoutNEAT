@@ -46,7 +46,9 @@ class Breakout(object):
                     self.stale_frame_count = 0
             if self.stale_frame_count > max_stale_frames:
                 self.stale = True
-                self.game_over = True
+                self.ball.cause_miss()
+            else:
+                self.stale = False
             self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
 
@@ -117,13 +119,16 @@ class Breakout(object):
         self.paddle.move_left()
 
     def move_paddle_none(self):
-        self.paddle.get_center()
+        pass
 
     def paddle_center(self):
         return self.paddle.hitbox.center[0]
 
-    def get_ball_center(self):
+    def get_ball_center_x(self):
         return self.ball.hitbox.center[0]
+
+    def get_ball_center_y(self):
+        return self.ball.hitbox.center[1]
 
     def get_ball_dx(self):
         return self.ball.dx
