@@ -25,13 +25,11 @@ class Breakout(object):
         self.wall = Wall()
         self.score = 0
         self.lives = init_lives
+        self.screen = screen
 
         # additional data for the fitness evaluation
-        self.avg_paddle_offset_from_ball = 0
-        self.total_paddle_offset_from_ball = 0
         self.total_paddle_offset_from_center = 0
         self.avg_paddle_offset_from_center = 0
-        self.screen = screen
         self.num_times_hit_paddle = 0
         self.hits_per_life = []
         self.stale = False
@@ -52,10 +50,7 @@ class Breakout(object):
             self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
 
-            self.total_paddle_offset_from_ball += numpy.abs(self.ball.hitbox.center[0] - self.paddle_center()[0])
-            self.avg_paddle_offset_from_ball = self.total_paddle_offset_from_ball / self.time
-
-            self.total_paddle_offset_from_center += numpy.abs((width / 2) - self.paddle_center()[0])
+            self.total_paddle_offset_from_center += numpy.abs((width / 2) - self.paddle_center())
             self.avg_paddle_offset_from_center = self.total_paddle_offset_from_center / self.time
 
         if self.ball.hitbox.top > height and self.lives > 0:
@@ -125,16 +120,19 @@ class Breakout(object):
         self.paddle.get_center()
 
     def paddle_center(self):
-        return self.paddle.hitbox.center
+        return self.paddle.hitbox.center[0]
 
     def get_ball_center(self):
-        return self.ball.hitbox.center
+        return self.ball.hitbox.center[0]
 
     def get_ball_dx(self):
-        return self.ball.dx, self.ball.dy
+        return self.ball.dx
 
     def get_ball_dy(self):
-        return self.ball.dy, self.ball.dx
+        return self.ball.dy
+
+    def get_ball_velocity_magnitude(self):
+        return numpy.sqrt((self.ball.dx * self.ball.dx) + (self.ball.dy * self.ball.dy))
 
     def reset(self):
         self.__init__(self.screen)

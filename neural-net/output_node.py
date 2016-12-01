@@ -8,6 +8,7 @@ from neural_net_params import *
 class OutputNode(Node):
     def __init__(self, act_function, index=-1):
         super(OutputNode, self).__init__()
+        random.seed()
         self.act_function = act_function
         self.weight = 0.0
         self.update_weight()
@@ -23,8 +24,8 @@ class OutputNode(Node):
     @staticmethod
     def sigmoid_activation_function(value):
         try:
-            return 1 / (1 + math.exp(-4.9 * value))
-        except OverflowError, e:
+            return 1 / (1 + math.exp(value))
+        except OverflowError:
             return (FALLBACK_WEIGHT_LOW, FALLBACK_WEIGHT_HIGH)[random.randint(0, 100) % 2]
 
     def do_act(self):

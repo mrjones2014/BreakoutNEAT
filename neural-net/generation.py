@@ -1,6 +1,5 @@
 from __future__ import division
-from output_node import OutputNode
-from input_node import InputNode
+from connection import Connection
 from neural_net_params import *
 from species import Species
 from decimal import Decimal
@@ -20,22 +19,6 @@ class Generation(object):
             individual = Species(self.number, i, self.breakout_model)
             self.init_individual(individual)
             self.individuals.append(individual)
-
-    def init_individual(self, individual):
-        """
-        Initialize an individual in a generation with input and output nodes and connections.
-        :param individual: specimen to initialize.
-        :return: void
-        """
-        individual.set_inputs([
-            InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center, 1),
-            InputNode(self.breakout_model.get_ball_dx, 2), InputNode(self.breakout_model.get_ball_dy, 3)
-        ])
-        individual.set_outputs([
-            OutputNode(self.breakout_model.move_paddle_left, 0), OutputNode(self.breakout_model.move_paddle_right, 1),
-            OutputNode(self.breakout_model.move_paddle_none, 2)
-        ])
-        individual.init_connections()
 
     def epoch(self):
         """
@@ -58,19 +41,9 @@ class Generation(object):
         s2_conns = specimen_2.get_all_connections()
         new_connections = Generation.breed_connections(s1_conns, s2_conns)
         self.evolved_child = Species(self.number + 1, 0, self.breakout_model)
+        self.evolved_child.init_nodes()
         for conn in new_connections:
-            input_is_duplicate = False
-            output_is_duplicate = False
-            for input_node in self.evolved_child.inputs:
-                if conn.input.is_same(input_node):
-                    input_is_duplicate = True
-            for output_node in self.evolved_child.outputs:
-                if conn.output.is_same(output_node):
-                    output_is_duplicate = True
-            if not input_is_duplicate:
-                self.evolved_child.add_input(conn.input)
-            if not output_is_duplicate:
-                self.evolved_child.add_output(conn.output)
+            Connection(self.evolved_child.inputs[conn.input.index], self.evolved_child.outputs[conn.output.index])
         self.evolved_child.mutate()
         self.epoch_occurred = True
         self.breakout_model.reset()
@@ -118,6 +91,16 @@ class Generation(object):
         for individual in self.individuals:
             total += Decimal(individual.fitness)
         return Decimal(total / Decimal(len(self.individuals)))
+
+    @staticmethod
+    def init_individual(individual):
+        """
+        Initialize an individual in a generation with input and output nodes and connections.
+        :param individual: specimen to initialize.
+        :return: void
+        """
+        individual.init_nodes()
+        individual.init_connections()
 
     @staticmethod
     def compare_individuals(ind_1, ind_2):
