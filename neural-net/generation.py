@@ -64,7 +64,7 @@ class Generation(object):
             individual.calculate_fitness()
             if self.highest_fitness is None or individual.fitness > self.highest_fitness:
                 self.highest_fitness = individual.fitness
-            logger.log("        " + str(individual.id) + " fitness = " + str(individual.fitness))
+            logger.log("        " + str(individual.id) + " fitness = " + DECIMAL_FORMAT_STR.format(individual.fitness))
             self.breakout_model.reset()
 
     def evolve_from_ancestor(self, ancestor):

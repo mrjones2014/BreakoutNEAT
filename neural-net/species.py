@@ -42,12 +42,15 @@ class Species(object):
 
     def calculate_fitness(self):
         self.fitness = self.breakout_model.score
-        if self.breakout_model.num_times_hit_paddle == 0:
-            self.fitness -= 1.0
-        else:
+        if self.fitness == 0:
+            self.fitness -= 2
+        if self.breakout_model.num_times_hit_paddle != 0:
             if not self.breakout_model.stale:
                 if self.breakout_model.score != 0:
                     self.fitness += numpy.log10(self.breakout_model.num_times_hit_paddle) / 5
+                    for hits in self.breakout_model.hits_per_life:
+                        if hits == 0:
+                            self.fitness += 0.1
                 else:
                     self.fitness += numpy.log10(self.breakout_model.num_times_hit_paddle) / 10
                 for hits in self.breakout_model.hits_per_life:
@@ -59,7 +62,9 @@ class Species(object):
                         else:
                             self.fitness += numpy.log10(hits) / 4
             else:
-                self.fitness -= 1.0
+                self.fitness -= 1.5
+
+        self.fitness = Decimal(self.fitness)
         return self.fitness
 
     def init_nodes(self):
@@ -166,8 +171,8 @@ class Species(object):
     def save_state(filename, xml_str):
         if not filename.endswith(".species"):
             filename += ".species"
-        if not filename.startswith(DATA_DIR):
-            filename = DATA_DIR + filename
+        if not filename.startswith(SPECIATION_DATA_DIR):
+            filename = SPECIATION_DATA_DIR + filename
         with open(filename, "w") as species_file:
             species_file.write(xml_str)
 

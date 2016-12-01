@@ -33,36 +33,33 @@ class Experiment(object):
         else:
             first_gen = seed_gen
         first_gen.run_and_evaluate(self.logger)
-        self.logger.log("    Average fitness in generation 0: " + str(first_gen.avg_fitness()))
+        self.logger.log("    Average fitness in generation 0: " + DECIMAL_FORMAT_STR.format(first_gen.avg_fitness()))
         first_ancestor = first_gen.epoch()
-        self.logger.log("    Highest fitness in generation 0: " + str(first_gen.highest_fitness))
+        self.logger.log("    Highest fitness in generation 0: " + DECIMAL_FORMAT_STR.format(first_gen.highest_fitness))
         curr_gen = first_gen.evolve_from_ancestor(first_ancestor)
         last_individual_xml = first_ancestor.to_xml_str()
         for i in range(1, NUM_GENERATIONS):
             self.logger.log("Running generation " + str(i) + "...")
             curr_gen.run_and_evaluate(self.logger)
-            self.logger.log("    Average fitness in generation " + str(i) + ": " + str(curr_gen.avg_fitness()))
+            self.logger.log("    Average fitness in generation " + str(i) + ": " + DECIMAL_FORMAT_STR.format(curr_gen.avg_fitness()))
             next_ancestor = curr_gen.epoch()
-            self.logger.log("    Highest fitness in generation " + str(i) + ": " + str(curr_gen.highest_fitness))
+            self.logger.log("    Highest fitness in generation " + str(i) + ": " + DECIMAL_FORMAT_STR.format(curr_gen.highest_fitness))
             if self.current_best_species is None or next_ancestor.fitness > self.current_best_species.fitness:
                 self.current_best_species = next_ancestor
             last_individual_xml = next_ancestor.to_xml_str()
             next_gen = curr_gen.evolve_from_ancestor(self.current_best_species)
             curr_gen = next_gen
-        save_to_file = raw_input("Save speciation data (y/n): ")
-        if save_to_file == "y" or save_to_file == "Y":
-            filename = raw_input("Enter filename to write to: ")
-            if not filename.endswith(".species"):
-                filename += ".species"
-            self.logger.log("Writing speciation data to file: " + filename)
-            Species.save_state(filename, last_individual_xml)
-            self.logger.log("Done writing speciation data to file: " + filename)
+        pygame.quit()
+        if SAVE_SPECIATION_DATA:
+            self.logger.log("Writing speciation data to file: " + SPECIATION_DATA_FILE)
+            Species.save_state(SPECIATION_DATA_FILE, last_individual_xml)
+            self.logger.log("Done writing speciation data to file: " + SPECIATION_DATA_FILE)
 
     def load_data(self, filename):
         if not filename.endswith(".species"):
             filename += ".species"
-        if not filename.startswith(DATA_DIR):
-            filename = DATA_DIR + filename
+        if not filename.startswith(SPECIATION_DATA_DIR):
+            filename = SPECIATION_DATA_DIR + filename
         try:
             with open(filename) as data_file:
                 xml_str = data_file.read()
@@ -79,14 +76,12 @@ if __name__ == "__main__":
     logger.log("Session start.")
     seed = None
     experiment = Experiment()
-    do_seed = raw_input("Load speciation data from file? (y/n): ")
-    if do_seed == "y" or do_seed == "Y":
-        file_name = raw_input("Enter name of species file: ")
-        logger.log("Attempting to load speciation data from file: " + file_name)
+    if DO_SEED:
+        logger.log("Attempting to load speciation data from file: " + SPECIATION_DATA_FILE)
         logger.log("Initializing Experiment...")
         experiment.initialize(logger)
-        seed = experiment.load_data(file_name)
-        logger.log("Successfully loaded speciation data from file: " + file_name)
+        seed = experiment.load_data(SPECIATION_DATA_FILE)
+        logger.log("Successfully loaded speciation data from file: " + SPECIATION_DATA_FILE)
     else:
         logger.log("Initializing Experiment...")
         experiment.initialize(logger)

@@ -26,6 +26,7 @@ class Breakout(object):
         self.score = 0
         self.lives = init_lives
         self.screen = screen
+        self.arrow_char = " - "
 
         # additional data for the fitness evaluation
         self.total_paddle_offset_from_center = 0
@@ -90,10 +91,17 @@ class Breakout(object):
             msg_rect = self.game_over_msg.get_rect()
             msg_rect = msg_rect.move(width / 2 - (msg_rect.center[0]), height / 3)
             self.screen.blit(self.game_over_msg, msg_rect)
+
         lives_msg = pygame.font.Font(None, 40).render("Lives: " + str(self.lives), True, (0, 255, 255), bgcolor)
         lives_msg_rect = lives_msg.get_rect()
         lives_msg_rect = lives_msg_rect.move(0, 0)
         self.screen.blit(lives_msg, lives_msg_rect)
+
+        arrow_indicator = pygame.font.Font(None, 40).render("Output: " + self.arrow_char, True, (0, 255, 255), bgcolor)
+        arrow_rect = arrow_indicator.get_rect()
+        arrow_rect = arrow_rect.move((width / 2) - (arrow_rect.right / 2), 0)
+        self.screen.blit(arrow_indicator, arrow_rect)
+
         score_text = pygame.font.Font(None, 40).render("Score: " + str(self.score), True, (0, 255, 255), bgcolor)
         score_text_rect = score_text.get_rect()
         score_text_rect = score_text_rect.move(width - score_text_rect.right, 0)
@@ -113,13 +121,15 @@ class Breakout(object):
         self.screen.blit(self.paddle.image, self.paddle.hitbox)
 
     def move_paddle_right(self):
+        self.arrow_char = " ->"
         self.paddle.move_right()
 
     def move_paddle_left(self):
+        self.arrow_char = "<- "
         self.paddle.move_left()
 
     def move_paddle_none(self):
-        pass
+        self.arrow_char = " - "
 
     def paddle_center(self):
         return self.paddle.hitbox.center[0]
