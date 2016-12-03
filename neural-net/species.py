@@ -41,6 +41,10 @@ class Species(object):
         return len(self.outputs)
 
     def calculate_fitness(self):
+        """
+        Genetic algorithm fitness function.
+        :return: fitness, a Decimal type
+        """
         self.fitness = self.breakout_model.score
         if self.fitness == 0:
             self.fitness -= 2
@@ -68,6 +72,10 @@ class Species(object):
         return self.fitness
 
     def init_nodes(self):
+        """
+        Set up the input and output nodes for the individual.
+        :return: void
+        """
         self.set_inputs([
             InputNode(self.breakout_model.paddle_center, 0), InputNode(self.breakout_model.get_ball_center_x, 1),
             InputNode(self.breakout_model.get_ball_center_y, 2), InputNode(self.breakout_model.get_ball_dx, 3),
@@ -142,6 +150,10 @@ class Species(object):
         sorted_outputs_list[0].do_act()
 
     def to_xml_str(self):
+        """
+        Generate XML string representing this individual's speciation data.
+        :return: xml_str, String in XML format.
+        """
         root = etree.Element("species")
         genome = etree.Element("genome")
         genome.text = str(self.genome)
@@ -169,6 +181,12 @@ class Species(object):
 
     @staticmethod
     def save_state(filename, xml_str):
+        """
+        Write XML data to file.
+        :param filename: file to write to; comes from neural_net_params.py
+        :param xml_str: the speciation data to write, in XML format.
+        :return: void
+        """
         if not filename.endswith(".species"):
             filename += ".species"
         if not filename.startswith(SPECIATION_DATA_DIR):
@@ -178,10 +196,23 @@ class Species(object):
 
     @staticmethod
     def node_weight_comparator(n1, n2):
+        """
+        Comparator for sorting nodes by weight.
+        :param n1: Node
+        :param n2: Node
+        :return: comparison of n1 and n2
+        """
         return int(n1.weight) - int(n2.weight)
 
     @staticmethod
     def copy(genome, individual_num, other_species):
+        """
+        Create a deep copy of this individual.
+        :param genome: the Genome the new species should belong to.
+        :param individual_num: the number of the new species.
+        :param other_species: the species to make a copy of.
+        :return: new_species, the copy generated.
+        """
         new_species = Species(genome, individual_num, other_species.breakout_model)
         new_species.inputs = other_species.inputs
         new_species.outputs = other_species.outputs
@@ -191,6 +222,12 @@ class Species(object):
 
     @staticmethod
     def parse(ancestor_xml, breakout_model):
+        """
+        Parse XML speciation data into a Species object.
+        :param ancestor_xml: the XML speciation data to read.
+        :param breakout_model: the Breakout object to associate with the generated species.
+        :return: new_spec, the parsed Species object.
+        """
         root = etree.fromstring(ancestor_xml)
         genome = int(root.find("genome").text)
         new_spec = Species(genome, 0, breakout_model)

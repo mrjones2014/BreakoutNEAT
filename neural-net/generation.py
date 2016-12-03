@@ -86,6 +86,10 @@ class Generation(object):
         return next_gen
 
     def avg_fitness(self):
+        """
+        Calculate average fitness for the generation.
+        :return: average fitness of all individuals in generation.
+        """
         total = 0.0
         total = Decimal(total)
         for individual in self.individuals:
@@ -132,14 +136,20 @@ class Generation(object):
         return connections
 
     @staticmethod
-    def seed(ancestor, generation_num):
-        new_gen = Generation(ancestor.breakout_model, generation_num)
-        new_gen.number = generation_num
+    def seed(ancestor, genome):
+        """
+        Create a Generation object from a pre-existing Species object. Used for loading speciation data from file.
+        :param ancestor: seed Species object
+        :param genome: the desired genome number
+        :return: void
+        """
+        new_gen = Generation(ancestor.breakout_model, genome)
+        new_gen.number = genome
         new_gen.individuals = []
         new_gen.breakout_model = ancestor.breakout_model
         new_gen.epoch_occurred = False
         new_gen.evolved_child = None
         for i in range(0, NUM_INDIVIDUALS_PER_GENERATION):
-            individual = Species.copy(generation_num, ancestor.individual_number, ancestor)
+            individual = Species.copy(genome, ancestor.individual_number, ancestor)
             new_gen.init_individual(individual)
             new_gen.individuals.append(individual)

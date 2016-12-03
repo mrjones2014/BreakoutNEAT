@@ -23,10 +23,15 @@ class OutputNode(Node):
 
     @staticmethod
     def sigmoid_activation_function(value):
+        """
+        Sigmoid activation function for the genetic algorithm outputs.
+        :param value: value on which to perform the Sigmoid activation.
+        :return: Decimal type
+        """
         try:
             return 1 / (1 + math.exp(value))
         except OverflowError:
-            return (FALLBACK_WEIGHT_LOW, FALLBACK_WEIGHT_HIGH)[random.randint(0, 100) % 2]
+            return random.choice([FALLBACK_WEIGHT_LOW, FALLBACK_WEIGHT_HIGH])
 
     def do_act(self):
         """

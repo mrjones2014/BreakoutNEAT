@@ -38,6 +38,10 @@ class Breakout(object):
         self.prev_ball_location = None
 
     def update(self):
+        """
+        Update the screen based on new model values; call on each frame of game.
+        :return: void
+        """
         if not self.game_over:
             if self.prev_ball_location is not None:
                 if numpy.abs(self.prev_ball_location[0] - self.ball.hitbox.center[0]) < 5 \
