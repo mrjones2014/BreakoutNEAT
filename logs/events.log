@@ -1,0 +1,955 @@
+[ 12/01/2016, 12:53:12 ]:  Session start.
+[ 12/01/2016, 12:53:20 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 12:53:20 ]:  Initializing Experiment...
+[ 12/01/2016, 12:53:20 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 12:53:20 ]:  Running Experiment...
+[ 12/01/2016, 12:53:20 ]:  Running generation 0...
+[ 12/01/2016, 12:53:25 ]:          species#generation:0-individual:0 fitness = 24.5
+[ 12/01/2016, 12:53:26 ]:          species#generation:0-individual:1 fitness = -1.5
+[ 12/01/2016, 12:53:27 ]:          species#generation:0-individual:2 fitness = -1.5
+[ 12/01/2016, 12:53:28 ]:          species#generation:0-individual:3 fitness = -1.5
+[ 12/01/2016, 12:53:29 ]:          species#generation:0-individual:4 fitness = -1.5
+[ 12/01/2016, 12:53:30 ]:          species#generation:0-individual:5 fitness = -1.5
+[ 12/01/2016, 12:53:31 ]:          species#generation:0-individual:6 fitness = 0.700
+[ 12/01/2016, 12:53:32 ]:          species#generation:0-individual:7 fitness = -1.5
+[ 12/01/2016, 12:53:34 ]:          species#generation:0-individual:8 fitness = 2.91
+[ 12/01/2016, 12:53:35 ]:          species#generation:0-individual:9 fitness = 0.700
+[ 12/01/2016, 12:53:36 ]:          species#generation:0-individual:10 fitness = -1.5
+[ 12/01/2016, 12:53:37 ]:          species#generation:0-individual:11 fitness = -1.5
+[ 12/01/2016, 12:53:38 ]:          species#generation:0-individual:12 fitness = -1.5
+[ 12/01/2016, 12:53:40 ]:          species#generation:0-individual:13 fitness = 4.91
+[ 12/01/2016, 12:53:41 ]:          species#generation:0-individual:14 fitness = -1.5
+[ 12/01/2016, 12:53:42 ]:          species#generation:0-individual:15 fitness = -1.5
+[ 12/01/2016, 12:53:43 ]:          species#generation:0-individual:16 fitness = -1.5
+[ 12/01/2016, 12:53:44 ]:          species#generation:0-individual:17 fitness = -1.5
+[ 12/01/2016, 12:53:45 ]:          species#generation:0-individual:18 fitness = 0.700
+[ 12/01/2016, 12:53:46 ]:          species#generation:0-individual:19 fitness = -1.5
+[ 12/01/2016, 12:53:46 ]:      Average fitness in generation 0: 0.672
+[ 12/01/2016, 12:53:46 ]:      Highest fitness in generation 0: 24.5
+[ 12/01/2016, 12:53:46 ]:  Running generation 1...
+[ 12/01/2016, 12:53:47 ]:          species#generation:1-individual:0 fitness = -1.5
+[ 12/01/2016, 12:53:48 ]:          species#generation:1-individual:1 fitness = 0.700
+[ 12/01/2016, 12:53:50 ]:          species#generation:1-individual:2 fitness = 0.700
+[ 12/01/2016, 12:53:51 ]:          species#generation:1-individual:3 fitness = -1.5
+[ 12/01/2016, 12:53:52 ]:          species#generation:1-individual:4 fitness = -1.5
+[ 12/01/2016, 12:53:53 ]:          species#generation:1-individual:5 fitness = -1.5
+[ 12/01/2016, 12:53:54 ]:          species#generation:1-individual:6 fitness = -1.5
+[ 12/01/2016, 12:53:55 ]:          species#generation:1-individual:7 fitness = 0.700
+[ 12/01/2016, 12:53:56 ]:          species#generation:1-individual:8 fitness = -1.5
+[ 12/01/2016, 12:53:57 ]:          species#generation:1-individual:9 fitness = -1.5
+[ 12/01/2016, 12:53:58 ]:          species#generation:1-individual:10 fitness = -1.5
+[ 12/01/2016, 12:53:59 ]:          species#generation:1-individual:11 fitness = -1.5
+[ 12/01/2016, 12:54:01 ]:          species#generation:1-individual:12 fitness = 1.86
+[ 12/01/2016, 12:54:02 ]:          species#generation:1-individual:13 fitness = -1.5
+[ 12/01/2016, 12:54:02 ]:          species#generation:1-individual:14 fitness = -1.5
+[ 12/01/2016, 12:54:04 ]:          species#generation:1-individual:15 fitness = 0.700
+[ 12/01/2016, 12:54:05 ]:          species#generation:1-individual:16 fitness = -1.5
+[ 12/01/2016, 12:54:06 ]:          species#generation:1-individual:17 fitness = -1.5
+[ 12/01/2016, 12:54:07 ]:          species#generation:1-individual:18 fitness = -1.5
+[ 12/01/2016, 12:54:08 ]:          species#generation:1-individual:19 fitness = 0.800
+[ 12/01/2016, 12:54:08 ]:      Average fitness in generation 1: -0.777
+[ 12/01/2016, 12:54:08 ]:      Highest fitness in generation 1: 1.86
+[ 12/01/2016, 12:54:08 ]:  Running generation 2...
+[ 12/01/2016, 12:54:09 ]:          species#generation:2-individual:0 fitness = -1.5
+[ 12/01/2016, 12:54:13 ]:          species#generation:2-individual:1 fitness = 4.73
+[ 12/01/2016, 12:54:14 ]:          species#generation:2-individual:2 fitness = 0.800
+[ 12/01/2016, 12:54:15 ]:          species#generation:2-individual:3 fitness = -1.5
+[ 12/01/2016, 12:54:16 ]:          species#generation:2-individual:4 fitness = -1.5
+[ 12/01/2016, 12:54:17 ]:          species#generation:2-individual:5 fitness = -1.5
+[ 12/01/2016, 12:54:20 ]:          species#generation:2-individual:6 fitness = 12.6
+[ 12/01/2016, 12:54:21 ]:          species#generation:2-individual:7 fitness = -1.5
+[ 12/01/2016, 12:54:22 ]:          species#generation:2-individual:8 fitness = -1.5
+[ 12/01/2016, 12:54:23 ]:          species#generation:2-individual:9 fitness = -1.5
+[ 12/01/2016, 12:54:25 ]:          species#generation:2-individual:10 fitness = 0.700
+[ 12/01/2016, 12:54:27 ]:          species#generation:2-individual:11 fitness = 2.01
+[ 12/01/2016, 12:54:27 ]:          species#generation:2-individual:12 fitness = -1.5
+[ 12/01/2016, 12:54:28 ]:          species#generation:2-individual:13 fitness = -1.5
+[ 12/01/2016, 12:54:30 ]:          species#generation:2-individual:14 fitness = 0.700
+[ 12/01/2016, 12:54:32 ]:          species#generation:2-individual:15 fitness = 2.91
+[ 12/01/2016, 12:54:34 ]:          species#generation:2-individual:16 fitness = 1.91
+[ 12/01/2016, 12:54:34 ]:          species#generation:2-individual:17 fitness = -1.5
+[ 12/01/2016, 12:54:36 ]:          species#generation:2-individual:18 fitness = 0.800
+[ 12/01/2016, 12:54:37 ]:          species#generation:2-individual:19 fitness = 0.800
+[ 12/01/2016, 12:54:37 ]:      Average fitness in generation 2: 0.650
+[ 12/01/2016, 12:54:37 ]:      Highest fitness in generation 2: 12.6
+[ 12/01/2016, 12:54:38 ]:  Running generation 3...
+[ 12/01/2016, 12:54:39 ]:          species#generation:3-individual:0 fitness = -1.5
+[ 12/01/2016, 12:54:40 ]:          species#generation:3-individual:1 fitness = 0.700
+[ 12/01/2016, 12:54:41 ]:          species#generation:3-individual:2 fitness = -1.5
+[ 12/01/2016, 12:54:42 ]:          species#generation:3-individual:3 fitness = -1.5
+[ 12/01/2016, 12:54:43 ]:          species#generation:3-individual:4 fitness = -1.5
+[ 12/01/2016, 12:54:44 ]:          species#generation:3-individual:5 fitness = -1.5
+[ 12/01/2016, 12:54:44 ]:          species#generation:3-individual:6 fitness = -1.5
+[ 12/01/2016, 12:54:45 ]:          species#generation:3-individual:7 fitness = -1.5
+[ 12/01/2016, 12:54:47 ]:          species#generation:3-individual:8 fitness = 0.800
+[ 12/01/2016, 12:54:48 ]:          species#generation:3-individual:9 fitness = -1.5
+[ 12/01/2016, 12:54:49 ]:          species#generation:3-individual:10 fitness = -1.5
+[ 12/01/2016, 12:54:49 ]:          species#generation:3-individual:11 fitness = -1.5
+[ 12/01/2016, 12:54:51 ]:          species#generation:3-individual:12 fitness = 3.70
+[ 12/01/2016, 12:54:53 ]:          species#generation:3-individual:13 fitness = 2.91
+[ 12/01/2016, 12:54:54 ]:          species#generation:3-individual:14 fitness = -1.5
+[ 12/01/2016, 12:54:55 ]:          species#generation:3-individual:15 fitness = 0.700
+[ 12/01/2016, 12:54:56 ]:          species#generation:3-individual:16 fitness = -1.5
+[ 12/01/2016, 12:54:57 ]:          species#generation:3-individual:17 fitness = -1.5
+[ 12/01/2016, 12:54:58 ]:          species#generation:3-individual:18 fitness = 0.700
+[ 12/01/2016, 12:54:59 ]:          species#generation:3-individual:19 fitness = -1.5
+[ 12/01/2016, 12:54:59 ]:      Average fitness in generation 3: -0.574
+[ 12/01/2016, 12:54:59 ]:      Highest fitness in generation 3: 3.70
+[ 12/01/2016, 12:54:59 ]:  Running generation 4...
+[ 12/01/2016, 12:55:01 ]:          species#generation:4-individual:0 fitness = 5.16
+[ 12/01/2016, 12:55:02 ]:          species#generation:4-individual:1 fitness = -1.5
+[ 12/01/2016, 12:55:03 ]:          species#generation:4-individual:2 fitness = -1.5
+[ 12/01/2016, 12:55:04 ]:          species#generation:4-individual:3 fitness = -1.5
+[ 12/01/2016, 12:55:06 ]:          species#generation:4-individual:4 fitness = 1.96
+[ 12/01/2016, 12:55:07 ]:          species#generation:4-individual:5 fitness = 2.91
+[ 12/01/2016, 12:55:08 ]:          species#generation:4-individual:6 fitness = -1.5
+[ 12/01/2016, 12:55:09 ]:          species#generation:4-individual:7 fitness = -1.5
+[ 12/01/2016, 12:55:10 ]:          species#generation:4-individual:8 fitness = -1.5
+[ 12/01/2016, 12:55:11 ]:          species#generation:4-individual:9 fitness = 0.700
+[ 12/01/2016, 12:55:12 ]:          species#generation:4-individual:10 fitness = -1.5
+[ 12/01/2016, 12:55:14 ]:          species#generation:4-individual:11 fitness = 0.700
+[ 12/01/2016, 12:55:15 ]:          species#generation:4-individual:12 fitness = -1.5
+[ 12/01/2016, 12:55:17 ]:          species#generation:4-individual:13 fitness = 5.91
+[ 12/01/2016, 12:55:21 ]:          species#generation:4-individual:14 fitness = 9.5
+[ 12/01/2016, 12:55:22 ]:          species#generation:4-individual:15 fitness = -1.5
+[ 12/01/2016, 12:55:23 ]:          species#generation:4-individual:16 fitness = -1.5
+[ 12/01/2016, 12:55:24 ]:          species#generation:4-individual:17 fitness = -1.5
+[ 12/01/2016, 12:55:25 ]:          species#generation:4-individual:18 fitness = -1.5
+[ 12/01/2016, 12:55:26 ]:          species#generation:4-individual:19 fitness = -1.5
+[ 12/01/2016, 12:55:26 ]:      Average fitness in generation 4: 0.367
+[ 12/01/2016, 12:55:26 ]:      Highest fitness in generation 4: 9.5
+[ 12/01/2016, 12:55:31 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 12:55:31 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 12:55:31 ]:  Experiment terminated cleanly.
+
+
+[ 12/01/2016, 12:55:59 ]:  Session start.
+[ 12/01/2016, 12:56:02 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 12:56:02 ]:  Initializing Experiment...
+[ 12/01/2016, 12:56:03 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 12:56:03 ]:  Running Experiment...
+[ 12/01/2016, 12:56:03 ]:  Running generation 0...
+[ 12/01/2016, 12:56:04 ]:          species#generation:0-individual:0 fitness = -1.5
+[ 12/01/2016, 12:56:04 ]:          species#generation:0-individual:1 fitness = -1.5
+[ 12/01/2016, 12:56:05 ]:          species#generation:0-individual:2 fitness = -1.5
+[ 12/01/2016, 12:56:06 ]:          species#generation:0-individual:3 fitness = -1.5
+[ 12/01/2016, 12:58:57 ]:  Session start.
+[ 12/01/2016, 12:59:11 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 12:59:11 ]:  Initializing Experiment...
+[ 12/01/2016, 12:59:11 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 12:59:11 ]:  Running Experiment...
+[ 12/01/2016, 12:59:11 ]:  Running generation 0...
+[ 12/01/2016, 12:59:12 ]:          species#generation:0-individual:0 fitness = -0.243
+[ 12/01/2016, 12:59:13 ]:          species#generation:0-individual:1 fitness = 0.800
+[ 12/01/2016, 12:59:14 ]:          species#generation:0-individual:2 fitness = -0.243
+[ 12/01/2016, 12:59:15 ]:          species#generation:0-individual:3 fitness = -0.243
+[ 12/01/2016, 12:59:16 ]:          species#generation:0-individual:4 fitness = -0.243
+[ 12/01/2016, 12:59:31 ]:  Session start.
+[ 12/01/2016, 12:59:34 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 12:59:34 ]:  Initializing Experiment...
+[ 12/01/2016, 12:59:35 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 12:59:35 ]:  Running Experiment...
+[ 12/01/2016, 12:59:35 ]:  Running generation 0...
+[ 12/01/2016, 12:59:36 ]:          species#generation:0-individual:0 fitness = -1.21
+[ 12/01/2016, 12:59:37 ]:          species#generation:0-individual:1 fitness = -1.21
+[ 12/01/2016, 12:59:38 ]:          species#generation:0-individual:2 fitness = -1.21
+[ 12/01/2016, 12:59:40 ]:          species#generation:0-individual:3 fitness = 4.28
+[ 12/01/2016, 12:59:41 ]:          species#generation:0-individual:4 fitness = -1.21
+[ 12/01/2016, 12:59:44 ]:          species#generation:0-individual:5 fitness = 11.3
+[ 12/01/2016, 12:59:45 ]:          species#generation:0-individual:6 fitness = -1.21
+[ 12/01/2016, 12:59:46 ]:          species#generation:0-individual:7 fitness = -1.21
+[ 12/01/2016, 12:59:47 ]:          species#generation:0-individual:8 fitness = -1.21
+[ 12/01/2016, 12:59:48 ]:          species#generation:0-individual:9 fitness = -1.21
+[ 12/01/2016, 12:59:49 ]:          species#generation:0-individual:10 fitness = -1.21
+[ 12/01/2016, 12:59:49 ]:          species#generation:0-individual:11 fitness = -1.21
+[ 12/01/2016, 12:59:50 ]:          species#generation:0-individual:12 fitness = -1.21
+[ 12/01/2016, 12:59:51 ]:          species#generation:0-individual:13 fitness = -1.21
+[ 12/01/2016, 12:59:52 ]:          species#generation:0-individual:14 fitness = -1.21
+[ 12/01/2016, 12:59:53 ]:          species#generation:0-individual:15 fitness = -1.21
+[ 12/01/2016, 12:59:54 ]:          species#generation:0-individual:16 fitness = -1.21
+[ 12/01/2016, 12:59:55 ]:          species#generation:0-individual:17 fitness = -1.21
+[ 12/01/2016, 12:59:56 ]:          species#generation:0-individual:18 fitness = Infinity
+[ 12/01/2016, 12:59:57 ]:          species#generation:0-individual:19 fitness = -1.21
+[ 12/01/2016, 12:59:57 ]:      Average fitness in generation 0: Infinity
+[ 12/01/2016, 01:09:56 ]:  Session start.
+[ 12/01/2016, 01:10:04 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 01:10:04 ]:  Initializing Experiment...
+[ 12/01/2016, 01:10:04 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 01:10:04 ]:  Running Experiment...
+[ 12/01/2016, 01:10:04 ]:  Running generation 0...
+[ 12/01/2016, 01:10:05 ]:          species#generation:0-individual:0 fitness = 0
+[ 12/01/2016, 01:10:06 ]:          species#generation:0-individual:1 fitness = 0
+[ 12/01/2016, 01:10:07 ]:          species#generation:0-individual:2 fitness = 0
+[ 12/01/2016, 01:10:08 ]:          species#generation:0-individual:3 fitness = 0
+[ 12/01/2016, 01:10:09 ]:          species#generation:0-individual:4 fitness = 0.800
+[ 12/01/2016, 01:10:10 ]:          species#generation:0-individual:5 fitness = 0
+[ 12/01/2016, 01:10:11 ]:          species#generation:0-individual:6 fitness = 0
+[ 12/01/2016, 01:10:17 ]:          species#generation:0-individual:7 fitness = 9.11
+[ 12/01/2016, 01:10:18 ]:          species#generation:0-individual:8 fitness = 0
+[ 12/01/2016, 01:10:18 ]:          species#generation:0-individual:9 fitness = 0
+[ 12/01/2016, 01:10:19 ]:          species#generation:0-individual:10 fitness = 0
+[ 12/01/2016, 01:10:21 ]:          species#generation:0-individual:11 fitness = 4.01
+[ 12/01/2016, 01:10:22 ]:          species#generation:0-individual:12 fitness = 0
+[ 12/01/2016, 01:10:23 ]:          species#generation:0-individual:13 fitness = 0
+[ 12/01/2016, 01:10:26 ]:          species#generation:0-individual:14 fitness = 8.34
+[ 12/01/2016, 01:10:28 ]:          species#generation:0-individual:15 fitness = 0.800
+[ 12/01/2016, 01:10:28 ]:          species#generation:0-individual:16 fitness = 0
+[ 12/01/2016, 01:10:29 ]:          species#generation:0-individual:17 fitness = 0
+[ 12/01/2016, 01:10:30 ]:          species#generation:0-individual:18 fitness = 0
+[ 12/01/2016, 01:10:31 ]:          species#generation:0-individual:19 fitness = 0
+[ 12/01/2016, 01:10:31 ]:      Average fitness in generation 0: 1.15
+[ 12/01/2016, 01:10:31 ]:      Highest fitness in generation 0: 9.11
+[ 12/01/2016, 01:10:31 ]:  Running generation 1...
+[ 12/01/2016, 01:10:32 ]:          species#generation:1-individual:0 fitness = 0
+[ 12/01/2016, 01:10:33 ]:          species#generation:1-individual:1 fitness = 0
+[ 12/01/2016, 01:10:34 ]:          species#generation:1-individual:2 fitness = 0.800
+[ 12/01/2016, 01:10:35 ]:          species#generation:1-individual:3 fitness = 0
+[ 12/01/2016, 01:10:36 ]:          species#generation:1-individual:4 fitness = 0
+[ 12/01/2016, 01:10:38 ]:          species#generation:1-individual:5 fitness = 2.80
+[ 12/01/2016, 01:10:39 ]:          species#generation:1-individual:6 fitness = 0.700
+[ 12/01/2016, 01:10:40 ]:          species#generation:1-individual:7 fitness = 0
+[ 12/01/2016, 01:10:44 ]:          species#generation:1-individual:8 fitness = 4.24
+[ 12/01/2016, 01:10:45 ]:          species#generation:1-individual:9 fitness = 0.700
+[ 12/01/2016, 01:10:49 ]:          species#generation:1-individual:10 fitness = 4.73
+[ 12/01/2016, 01:10:51 ]:          species#generation:1-individual:11 fitness = 3.16
+[ 12/01/2016, 01:10:52 ]:          species#generation:1-individual:12 fitness = 0
+[ 12/01/2016, 01:10:54 ]:          species#generation:1-individual:13 fitness = 6.91
+[ 12/01/2016, 01:10:55 ]:          species#generation:1-individual:14 fitness = 0
+[ 12/01/2016, 01:10:56 ]:          species#generation:1-individual:15 fitness = 0.700
+[ 12/01/2016, 01:10:57 ]:          species#generation:1-individual:16 fitness = 9.80
+[ 12/01/2016, 01:10:59 ]:          species#generation:1-individual:17 fitness = 1.96
+[ 12/01/2016, 01:11:00 ]:          species#generation:1-individual:18 fitness = 0
+[ 12/01/2016, 01:11:01 ]:          species#generation:1-individual:19 fitness = 0
+[ 12/01/2016, 01:11:01 ]:      Average fitness in generation 1: 1.83
+[ 12/01/2016, 01:11:01 ]:      Highest fitness in generation 1: 9.80
+[ 12/01/2016, 01:11:01 ]:  Running generation 2...
+[ 12/01/2016, 01:11:04 ]:          species#generation:2-individual:0 fitness = 7.52
+[ 12/01/2016, 01:11:06 ]:          species#generation:2-individual:1 fitness = 0.800
+[ 12/01/2016, 01:11:07 ]:          species#generation:2-individual:2 fitness = 0
+[ 12/01/2016, 01:11:08 ]:          species#generation:2-individual:3 fitness = 0
+[ 12/01/2016, 01:11:08 ]:          species#generation:2-individual:4 fitness = 0
+[ 12/01/2016, 01:11:10 ]:          species#generation:2-individual:5 fitness = 0.700
+[ 12/01/2016, 01:11:11 ]:          species#generation:2-individual:6 fitness = 0
+[ 12/01/2016, 01:11:12 ]:          species#generation:2-individual:7 fitness = 0.800
+[ 12/01/2016, 01:11:13 ]:          species#generation:2-individual:8 fitness = 0
+[ 12/01/2016, 01:11:18 ]:          species#generation:2-individual:9 fitness = 13.3
+[ 12/01/2016, 01:11:19 ]:          species#generation:2-individual:10 fitness = 0
+[ 12/01/2016, 01:11:21 ]:          species#generation:2-individual:11 fitness = 6.91
+[ 12/01/2016, 01:11:22 ]:          species#generation:2-individual:12 fitness = 0.700
+[ 12/01/2016, 01:11:23 ]:          species#generation:2-individual:13 fitness = 0
+[ 12/01/2016, 01:11:24 ]:          species#generation:2-individual:14 fitness = 0.800
+[ 12/01/2016, 01:11:26 ]:          species#generation:2-individual:15 fitness = 0.700
+[ 12/01/2016, 01:11:27 ]:          species#generation:2-individual:16 fitness = 0
+[ 12/01/2016, 01:11:29 ]:          species#generation:2-individual:17 fitness = 2.91
+[ 12/01/2016, 01:11:30 ]:          species#generation:2-individual:18 fitness = 0
+[ 12/01/2016, 01:11:31 ]:          species#generation:2-individual:19 fitness = 0
+[ 12/01/2016, 01:11:31 ]:      Average fitness in generation 2: 1.76
+[ 12/01/2016, 01:11:31 ]:      Highest fitness in generation 2: 13.3
+[ 12/01/2016, 01:11:31 ]:  Running generation 3...
+[ 12/01/2016, 01:11:32 ]:          species#generation:3-individual:0 fitness = 0
+[ 12/01/2016, 01:11:32 ]:          species#generation:3-individual:1 fitness = 0
+[ 12/01/2016, 01:11:33 ]:          species#generation:3-individual:2 fitness = 0
+[ 12/01/2016, 01:11:37 ]:          species#generation:3-individual:3 fitness = 9.34
+[ 12/01/2016, 01:11:38 ]:          species#generation:3-individual:4 fitness = 2.70
+[ 12/01/2016, 01:11:43 ]:          species#generation:3-individual:5 fitness = 27.7
+[ 12/01/2016, 01:11:44 ]:          species#generation:3-individual:6 fitness = 0.700
+[ 12/01/2016, 01:11:45 ]:          species#generation:3-individual:7 fitness = 0
+[ 12/01/2016, 01:11:46 ]:          species#generation:3-individual:8 fitness = 0
+[ 12/01/2016, 01:11:47 ]:          species#generation:3-individual:9 fitness = 0
+[ 12/01/2016, 01:11:47 ]:          species#generation:3-individual:10 fitness = 0
+[ 12/01/2016, 01:11:49 ]:          species#generation:3-individual:11 fitness = 2.01
+[ 12/01/2016, 01:11:50 ]:          species#generation:3-individual:12 fitness = 0
+[ 12/01/2016, 01:11:51 ]:          species#generation:3-individual:13 fitness = 0
+[ 12/01/2016, 01:11:52 ]:          species#generation:3-individual:14 fitness = 0
+[ 12/01/2016, 01:11:53 ]:          species#generation:3-individual:15 fitness = 0.800
+[ 12/01/2016, 01:11:54 ]:          species#generation:3-individual:16 fitness = 0
+[ 12/01/2016, 01:11:56 ]:          species#generation:3-individual:17 fitness = 1.96
+[ 12/01/2016, 01:11:57 ]:          species#generation:3-individual:18 fitness = 0
+[ 12/01/2016, 01:11:58 ]:          species#generation:3-individual:19 fitness = 0
+[ 12/01/2016, 01:11:58 ]:      Average fitness in generation 3: 2.26
+[ 12/01/2016, 01:11:58 ]:      Highest fitness in generation 3: 27.7
+[ 12/01/2016, 01:11:58 ]:  Running generation 4...
+[ 12/01/2016, 01:11:59 ]:          species#generation:4-individual:0 fitness = 0
+[ 12/01/2016, 01:12:00 ]:          species#generation:4-individual:1 fitness = 0.700
+[ 12/01/2016, 01:12:01 ]:          species#generation:4-individual:2 fitness = 0
+[ 12/01/2016, 01:12:02 ]:          species#generation:4-individual:3 fitness = 0.800
+[ 12/01/2016, 01:12:03 ]:          species#generation:4-individual:4 fitness = 0.800
+[ 12/01/2016, 01:12:05 ]:          species#generation:4-individual:5 fitness = 0.700
+[ 12/01/2016, 01:12:06 ]:          species#generation:4-individual:6 fitness = 0.700
+[ 12/01/2016, 01:12:08 ]:          species#generation:4-individual:7 fitness = 9.03
+[ 12/01/2016, 01:12:09 ]:          species#generation:4-individual:8 fitness = 0
+[ 12/01/2016, 01:12:10 ]:          species#generation:4-individual:9 fitness = 0
+[ 12/01/2016, 01:12:11 ]:          species#generation:4-individual:10 fitness = 0.700
+[ 12/01/2016, 01:12:12 ]:          species#generation:4-individual:11 fitness = 0
+[ 12/01/2016, 01:12:14 ]:          species#generation:4-individual:12 fitness = 9.37
+[ 12/01/2016, 01:12:16 ]:          species#generation:4-individual:13 fitness = 0.800
+[ 12/01/2016, 01:12:17 ]:          species#generation:4-individual:14 fitness = 0
+[ 12/01/2016, 01:12:17 ]:          species#generation:4-individual:15 fitness = 0
+[ 12/01/2016, 01:12:18 ]:          species#generation:4-individual:16 fitness = 0
+[ 12/01/2016, 01:12:20 ]:          species#generation:4-individual:17 fitness = 0.700
+[ 12/01/2016, 01:12:21 ]:          species#generation:4-individual:18 fitness = 0
+[ 12/01/2016, 01:12:24 ]:          species#generation:4-individual:19 fitness = 15.2
+[ 12/01/2016, 01:12:24 ]:      Average fitness in generation 4: 1.97
+[ 12/01/2016, 01:12:24 ]:      Highest fitness in generation 4: 15.2
+[ 12/01/2016, 01:12:36 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:12:36 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:12:36 ]:  Experiment terminated cleanly.
+
+
+[ 12/01/2016, 01:15:34 ]:  Session start.
+[ 12/01/2016, 01:15:38 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 01:15:38 ]:  Initializing Experiment...
+[ 12/01/2016, 01:15:38 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 01:15:38 ]:  Running Experiment...
+[ 12/01/2016, 01:15:38 ]:  Running generation 0...
+[ 12/01/2016, 01:15:40 ]:          species#generation:0-individual:0 fitness = 9.03
+[ 12/01/2016, 01:15:41 ]:          species#generation:0-individual:1 fitness = -2
+[ 12/01/2016, 01:15:43 ]:          species#generation:0-individual:2 fitness = 0.700
+[ 12/01/2016, 01:15:44 ]:          species#generation:0-individual:3 fitness = -2
+[ 12/01/2016, 01:15:45 ]:          species#generation:0-individual:4 fitness = -2
+[ 12/01/2016, 01:15:48 ]:          species#generation:0-individual:5 fitness = 7.51
+[ 12/01/2016, 01:15:49 ]:          species#generation:0-individual:6 fitness = 0.700
+[ 12/01/2016, 01:15:51 ]:          species#generation:0-individual:7 fitness = 0.800
+[ 12/01/2016, 01:15:52 ]:          species#generation:0-individual:8 fitness = -2
+[ 12/01/2016, 01:15:53 ]:          species#generation:0-individual:9 fitness = -2
+[ 12/01/2016, 01:15:54 ]:          species#generation:0-individual:10 fitness = -2
+[ 12/01/2016, 01:15:55 ]:          species#generation:0-individual:11 fitness = -2
+[ 12/01/2016, 01:15:55 ]:          species#generation:0-individual:12 fitness = -2
+[ 12/01/2016, 01:15:57 ]:          species#generation:0-individual:13 fitness = 0.800
+[ 12/01/2016, 01:15:58 ]:          species#generation:0-individual:14 fitness = -2
+[ 12/01/2016, 01:15:59 ]:          species#generation:0-individual:15 fitness = -2
+[ 12/01/2016, 01:16:00 ]:          species#generation:0-individual:16 fitness = -2
+[ 12/01/2016, 01:16:02 ]:          species#generation:0-individual:17 fitness = 9.03
+[ 12/01/2016, 01:16:03 ]:          species#generation:0-individual:18 fitness = -2
+[ 12/01/2016, 01:16:06 ]:          species#generation:0-individual:19 fitness = 4.03
+[ 12/01/2016, 01:16:06 ]:      Average fitness in generation 0: 0.430
+[ 12/01/2016, 01:16:06 ]:      Highest fitness in generation 0: 9.03
+[ 12/01/2016, 01:16:06 ]:  Running generation 1...
+[ 12/01/2016, 01:16:08 ]:          species#generation:1-individual:0 fitness = 9.03
+[ 12/01/2016, 01:16:09 ]:          species#generation:1-individual:1 fitness = -2
+[ 12/01/2016, 01:16:12 ]:          species#generation:1-individual:2 fitness = 8.22
+[ 12/01/2016, 01:16:14 ]:          species#generation:1-individual:3 fitness = 12.2
+[ 12/01/2016, 01:16:15 ]:          species#generation:1-individual:4 fitness = -2
+[ 12/01/2016, 01:16:16 ]:          species#generation:1-individual:5 fitness = -2
+[ 12/01/2016, 01:16:19 ]:          species#generation:1-individual:6 fitness = 7.37
+[ 12/01/2016, 01:16:20 ]:          species#generation:1-individual:7 fitness = 1.70
+[ 12/01/2016, 01:16:21 ]:          species#generation:1-individual:8 fitness = -2
+[ 12/01/2016, 01:16:24 ]:          species#generation:1-individual:9 fitness = 7.19
+[ 12/01/2016, 01:16:26 ]:          species#generation:1-individual:10 fitness = 0.800
+[ 12/01/2016, 01:16:26 ]:          species#generation:1-individual:11 fitness = -2
+[ 12/01/2016, 01:16:27 ]:          species#generation:1-individual:12 fitness = -2
+[ 12/01/2016, 01:16:29 ]:          species#generation:1-individual:13 fitness = 3.70
+[ 12/01/2016, 01:16:31 ]:          species#generation:1-individual:14 fitness = 4.03
+[ 12/01/2016, 01:16:32 ]:          species#generation:1-individual:15 fitness = -2
+[ 12/01/2016, 01:16:33 ]:          species#generation:1-individual:16 fitness = -2
+[ 12/01/2016, 01:16:35 ]:          species#generation:1-individual:17 fitness = 1.91
+[ 12/01/2016, 01:16:35 ]:          species#generation:1-individual:18 fitness = -2
+[ 12/01/2016, 01:16:36 ]:          species#generation:1-individual:19 fitness = -2
+[ 12/01/2016, 01:16:36 ]:      Average fitness in generation 1: 1.81
+[ 12/01/2016, 01:16:36 ]:      Highest fitness in generation 1: 12.2
+[ 12/01/2016, 01:16:37 ]:  Running generation 2...
+[ 12/01/2016, 01:16:37 ]:          species#generation:2-individual:0 fitness = -2
+[ 12/01/2016, 01:16:38 ]:          species#generation:2-individual:1 fitness = -2
+[ 12/01/2016, 01:16:40 ]:          species#generation:2-individual:2 fitness = 0.700
+[ 12/01/2016, 01:16:42 ]:          species#generation:2-individual:3 fitness = 1.96
+[ 12/01/2016, 01:16:43 ]:          species#generation:2-individual:4 fitness = 0.700
+[ 12/01/2016, 01:16:44 ]:          species#generation:2-individual:5 fitness = 0.800
+[ 12/01/2016, 01:16:45 ]:          species#generation:2-individual:6 fitness = -2
+[ 12/01/2016, 01:16:51 ]:          species#generation:2-individual:7 fitness = 10.7
+[ 12/01/2016, 01:16:52 ]:          species#generation:2-individual:8 fitness = -2
+[ 12/01/2016, 01:16:54 ]:          species#generation:2-individual:9 fitness = 9.37
+[ 12/01/2016, 01:16:55 ]:          species#generation:2-individual:10 fitness = -2
+[ 12/01/2016, 01:16:57 ]:          species#generation:2-individual:11 fitness = 1.91
+[ 12/01/2016, 01:16:59 ]:          species#generation:2-individual:12 fitness = 2.91
+[ 12/01/2016, 01:17:00 ]:          species#generation:2-individual:13 fitness = -2
+[ 12/01/2016, 01:17:04 ]:          species#generation:2-individual:14 fitness = 6.73
+[ 12/01/2016, 01:17:05 ]:          species#generation:2-individual:15 fitness = -2
+[ 12/01/2016, 01:17:06 ]:          species#generation:2-individual:16 fitness = -2
+[ 12/01/2016, 01:17:08 ]:          species#generation:2-individual:17 fitness = 0.800
+[ 12/01/2016, 01:17:09 ]:          species#generation:2-individual:18 fitness = -2
+[ 12/01/2016, 01:17:11 ]:          species#generation:2-individual:19 fitness = 7.05
+[ 12/01/2016, 01:17:11 ]:      Average fitness in generation 2: 1.28
+[ 12/01/2016, 01:17:11 ]:      Highest fitness in generation 2: 10.7
+[ 12/01/2016, 01:17:11 ]:  Running generation 3...
+[ 12/01/2016, 01:17:12 ]:          species#generation:3-individual:0 fitness = -2
+[ 12/01/2016, 01:17:14 ]:          species#generation:3-individual:1 fitness = 1.96
+[ 12/01/2016, 01:17:15 ]:          species#generation:3-individual:2 fitness = -2
+[ 12/01/2016, 01:17:18 ]:          species#generation:3-individual:3 fitness = 7.52
+[ 12/01/2016, 01:17:19 ]:          species#generation:3-individual:4 fitness = 0.800
+[ 12/01/2016, 01:17:20 ]:          species#generation:3-individual:5 fitness = -2
+[ 12/01/2016, 01:17:22 ]:          species#generation:3-individual:6 fitness = 3.16
+[ 12/01/2016, 01:17:23 ]:          species#generation:3-individual:7 fitness = -2
+[ 12/01/2016, 01:17:24 ]:          species#generation:3-individual:8 fitness = -2
+[ 12/01/2016, 01:17:25 ]:          species#generation:3-individual:9 fitness = -2
+[ 12/01/2016, 01:17:26 ]:          species#generation:3-individual:10 fitness = -2
+[ 12/01/2016, 01:17:27 ]:          species#generation:3-individual:11 fitness = -2
+[ 12/01/2016, 01:17:28 ]:          species#generation:3-individual:12 fitness = -2
+[ 12/01/2016, 01:17:29 ]:          species#generation:3-individual:13 fitness = 0.700
+[ 12/01/2016, 01:17:30 ]:          species#generation:3-individual:14 fitness = -2
+[ 12/01/2016, 01:17:31 ]:          species#generation:3-individual:15 fitness = -2
+[ 12/01/2016, 01:17:32 ]:          species#generation:3-individual:16 fitness = 0.800
+[ 12/01/2016, 01:17:33 ]:          species#generation:3-individual:17 fitness = -2
+[ 12/01/2016, 01:17:34 ]:          species#generation:3-individual:18 fitness = -2
+[ 12/01/2016, 01:17:35 ]:          species#generation:3-individual:19 fitness = -2
+[ 12/01/2016, 01:17:35 ]:      Average fitness in generation 3: -0.653
+[ 12/01/2016, 01:17:35 ]:      Highest fitness in generation 3: 7.52
+[ 12/01/2016, 01:17:36 ]:  Running generation 4...
+[ 12/01/2016, 01:17:37 ]:          species#generation:4-individual:0 fitness = 0.700
+[ 12/01/2016, 01:17:38 ]:          species#generation:4-individual:1 fitness = -2
+[ 12/01/2016, 01:17:39 ]:          species#generation:4-individual:2 fitness = -2
+[ 12/01/2016, 01:17:40 ]:          species#generation:4-individual:3 fitness = -2
+[ 12/01/2016, 01:17:41 ]:          species#generation:4-individual:4 fitness = -2
+[ 12/01/2016, 01:17:42 ]:          species#generation:4-individual:5 fitness = -2
+[ 12/01/2016, 01:17:43 ]:          species#generation:4-individual:6 fitness = -2
+[ 12/01/2016, 01:17:44 ]:          species#generation:4-individual:7 fitness = -2
+[ 12/01/2016, 01:17:45 ]:          species#generation:4-individual:8 fitness = -2
+[ 12/01/2016, 01:17:47 ]:          species#generation:4-individual:9 fitness = 9.37
+[ 12/01/2016, 01:17:50 ]:          species#generation:4-individual:10 fitness = 7.03
+[ 12/01/2016, 01:17:51 ]:          species#generation:4-individual:11 fitness = 0.700
+[ 12/01/2016, 01:17:52 ]:          species#generation:4-individual:12 fitness = -2
+[ 12/01/2016, 01:17:53 ]:          species#generation:4-individual:13 fitness = -2
+[ 12/01/2016, 01:17:55 ]:          species#generation:4-individual:14 fitness = 9.03
+[ 12/01/2016, 01:17:56 ]:          species#generation:4-individual:15 fitness = -2
+[ 12/01/2016, 01:17:57 ]:          species#generation:4-individual:16 fitness = 0.700
+[ 12/01/2016, 01:17:59 ]:          species#generation:4-individual:17 fitness = 0.800
+[ 12/01/2016, 01:18:00 ]:          species#generation:4-individual:18 fitness = -2
+[ 12/01/2016, 01:18:00 ]:          species#generation:4-individual:19 fitness = -2
+[ 12/01/2016, 01:18:00 ]:      Average fitness in generation 4: 0.117
+[ 12/01/2016, 01:18:00 ]:      Highest fitness in generation 4: 9.37
+[ 12/01/2016, 01:18:14 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:18:14 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:18:14 ]:  Experiment terminated cleanly.
+
+
+[ 12/01/2016, 01:20:43 ]:  Session start.
+[ 12/01/2016, 01:20:44 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 01:20:44 ]:  Initializing Experiment...
+[ 12/01/2016, 01:20:45 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 01:20:45 ]:  Running Experiment...
+[ 12/01/2016, 01:20:45 ]:  Running generation 0...
+[ 12/01/2016, 01:20:46 ]:          species#generation:0-individual:0 fitness = 0.700
+[ 12/01/2016, 01:20:47 ]:          species#generation:0-individual:1 fitness = 0.700
+[ 12/01/2016, 01:20:52 ]:          species#generation:0-individual:2 fitness = -3.5
+[ 12/01/2016, 01:20:53 ]:          species#generation:0-individual:3 fitness = -2
+[ 12/01/2016, 01:20:53 ]:          species#generation:0-individual:4 fitness = -2
+[ 12/01/2016, 01:20:54 ]:          species#generation:0-individual:5 fitness = -2
+[ 12/01/2016, 01:20:55 ]:          species#generation:0-individual:6 fitness = -2
+[ 12/01/2016, 01:20:58 ]:          species#generation:0-individual:7 fitness = 9.03
+[ 12/01/2016, 01:20:59 ]:          species#generation:0-individual:8 fitness = -2
+[ 12/01/2016, 01:21:00 ]:          species#generation:0-individual:9 fitness = 0.800
+[ 12/01/2016, 01:21:01 ]:          species#generation:0-individual:10 fitness = 0.700
+[ 12/01/2016, 01:21:04 ]:          species#generation:0-individual:11 fitness = 7.19
+[ 12/01/2016, 01:21:05 ]:          species#generation:0-individual:12 fitness = -2
+[ 12/01/2016, 01:21:06 ]:          species#generation:0-individual:13 fitness = -2
+[ 12/01/2016, 01:21:08 ]:          species#generation:0-individual:14 fitness = 0.700
+[ 12/01/2016, 01:21:08 ]:          species#generation:0-individual:15 fitness = -2
+[ 12/01/2016, 01:21:10 ]:          species#generation:0-individual:16 fitness = 0.700
+[ 12/01/2016, 01:21:11 ]:          species#generation:0-individual:17 fitness = 0.700
+[ 12/01/2016, 01:21:12 ]:          species#generation:0-individual:18 fitness = -2
+[ 12/01/2016, 01:21:13 ]:          species#generation:0-individual:19 fitness = -2
+[ 12/01/2016, 01:21:13 ]:      Average fitness in generation 0: -0.114
+[ 12/01/2016, 01:21:13 ]:      Highest fitness in generation 0: 9.03
+[ 12/01/2016, 01:21:13 ]:  Running generation 1...
+[ 12/01/2016, 01:21:16 ]:          species#generation:1-individual:0 fitness = 7.03
+[ 12/01/2016, 01:21:18 ]:          species#generation:1-individual:1 fitness = 7.03
+[ 12/01/2016, 01:21:20 ]:          species#generation:1-individual:2 fitness = 0.700
+[ 12/01/2016, 01:21:21 ]:          species#generation:1-individual:3 fitness = -2
+[ 12/01/2016, 01:21:22 ]:          species#generation:1-individual:4 fitness = 0.700
+[ 12/01/2016, 01:21:23 ]:          species#generation:1-individual:5 fitness = 0.700
+[ 12/01/2016, 01:21:24 ]:          species#generation:1-individual:6 fitness = -2
+[ 12/01/2016, 01:21:25 ]:          species#generation:1-individual:7 fitness = -2
+[ 12/01/2016, 01:21:26 ]:          species#generation:1-individual:8 fitness = -2
+[ 12/01/2016, 01:21:28 ]:          species#generation:1-individual:9 fitness = 0.700
+[ 12/01/2016, 01:21:30 ]:          species#generation:1-individual:10 fitness = 1.96
+[ 12/01/2016, 01:21:34 ]:          species#generation:1-individual:11 fitness = 5.75
+[ 12/01/2016, 01:21:35 ]:          species#generation:1-individual:12 fitness = 0.700
+[ 12/01/2016, 01:21:36 ]:          species#generation:1-individual:13 fitness = -2
+[ 12/01/2016, 01:21:38 ]:          species#generation:1-individual:14 fitness = 4.01
+[ 12/01/2016, 01:21:40 ]:          species#generation:1-individual:15 fitness = 2.91
+[ 12/01/2016, 01:21:42 ]:          species#generation:1-individual:16 fitness = 0.800
+[ 12/01/2016, 01:21:43 ]:          species#generation:1-individual:17 fitness = -2
+[ 12/01/2016, 01:21:44 ]:          species#generation:1-individual:18 fitness = -2
+[ 12/01/2016, 01:21:44 ]:          species#generation:1-individual:19 fitness = -2
+[ 12/01/2016, 01:21:45 ]:      Average fitness in generation 1: 0.850
+[ 12/01/2016, 01:21:45 ]:      Highest fitness in generation 1: 7.03
+[ 12/01/2016, 01:21:45 ]:  Running generation 2...
+[ 12/01/2016, 01:21:46 ]:          species#generation:2-individual:0 fitness = -2
+[ 12/01/2016, 01:21:47 ]:          species#generation:2-individual:1 fitness = 0.800
+[ 12/01/2016, 01:21:48 ]:          species#generation:2-individual:2 fitness = -2
+[ 12/01/2016, 01:21:50 ]:          species#generation:2-individual:3 fitness = 2.91
+[ 12/01/2016, 01:21:51 ]:          species#generation:2-individual:4 fitness = -2
+[ 12/01/2016, 01:21:52 ]:          species#generation:2-individual:5 fitness = -2
+[ 12/01/2016, 01:21:53 ]:          species#generation:2-individual:6 fitness = -2
+[ 12/01/2016, 01:21:55 ]:          species#generation:2-individual:7 fitness = 0.700
+[ 12/01/2016, 01:21:55 ]:          species#generation:2-individual:8 fitness = -2
+[ 12/01/2016, 01:21:56 ]:          species#generation:2-individual:9 fitness = -2
+[ 12/01/2016, 01:21:57 ]:          species#generation:2-individual:10 fitness = -2
+[ 12/01/2016, 01:21:59 ]:          species#generation:2-individual:11 fitness = 3.80
+[ 12/01/2016, 01:22:00 ]:          species#generation:2-individual:12 fitness = -2
+[ 12/01/2016, 01:22:01 ]:          species#generation:2-individual:13 fitness = -2
+[ 12/01/2016, 01:22:01 ]:          species#generation:2-individual:14 fitness = -2
+[ 12/01/2016, 01:22:04 ]:          species#generation:2-individual:15 fitness = 4.05
+[ 12/01/2016, 01:22:05 ]:          species#generation:2-individual:16 fitness = -2
+[ 12/01/2016, 01:22:06 ]:          species#generation:2-individual:17 fitness = -2
+[ 12/01/2016, 01:22:08 ]:          species#generation:2-individual:18 fitness = 9.03
+[ 12/01/2016, 01:22:09 ]:          species#generation:2-individual:19 fitness = -2
+[ 12/01/2016, 01:22:09 ]:      Average fitness in generation 2: -0.335
+[ 12/01/2016, 01:22:09 ]:      Highest fitness in generation 2: 9.03
+[ 12/01/2016, 01:22:09 ]:  Running generation 3...
+[ 12/01/2016, 01:22:10 ]:          species#generation:3-individual:0 fitness = -2
+[ 12/01/2016, 01:22:12 ]:          species#generation:3-individual:1 fitness = 0.700
+[ 12/01/2016, 01:22:13 ]:          species#generation:3-individual:2 fitness = 0.700
+[ 12/01/2016, 01:22:14 ]:          species#generation:3-individual:3 fitness = 0.700
+[ 12/01/2016, 01:22:15 ]:          species#generation:3-individual:4 fitness = -2
+[ 12/01/2016, 01:22:16 ]:          species#generation:3-individual:5 fitness = -2
+[ 12/01/2016, 01:22:18 ]:          species#generation:3-individual:6 fitness = 0.700
+[ 12/01/2016, 01:22:20 ]:          species#generation:3-individual:7 fitness = 1.86
+[ 12/01/2016, 01:22:20 ]:          species#generation:3-individual:8 fitness = -2
+[ 12/01/2016, 01:22:21 ]:          species#generation:3-individual:9 fitness = -2
+[ 12/01/2016, 01:22:22 ]:          species#generation:3-individual:10 fitness = -2
+[ 12/01/2016, 01:22:25 ]:          species#generation:3-individual:11 fitness = 8.12
+[ 12/01/2016, 01:22:26 ]:          species#generation:3-individual:12 fitness = 0.700
+[ 12/01/2016, 01:22:29 ]:          species#generation:3-individual:13 fitness = 10.2
+[ 12/01/2016, 01:22:30 ]:          species#generation:3-individual:14 fitness = -2
+[ 12/01/2016, 01:22:31 ]:          species#generation:3-individual:15 fitness = -2
+[ 12/01/2016, 01:22:33 ]:          species#generation:3-individual:16 fitness = 1.96
+[ 12/01/2016, 01:22:33 ]:          species#generation:3-individual:17 fitness = -2
+[ 12/01/2016, 01:22:34 ]:          species#generation:3-individual:18 fitness = -2
+[ 12/01/2016, 01:22:37 ]:          species#generation:3-individual:19 fitness = 7.03
+[ 12/01/2016, 01:22:37 ]:      Average fitness in generation 3: 0.632
+[ 12/01/2016, 01:22:37 ]:      Highest fitness in generation 3: 10.2
+[ 12/01/2016, 01:22:37 ]:  Running generation 4...
+[ 12/01/2016, 01:22:38 ]:          species#generation:4-individual:0 fitness = -2
+[ 12/01/2016, 01:22:39 ]:          species#generation:4-individual:1 fitness = -2
+[ 12/01/2016, 01:22:39 ]:          species#generation:4-individual:2 fitness = -2
+[ 12/01/2016, 01:22:41 ]:          species#generation:4-individual:3 fitness = 0.700
+[ 12/01/2016, 01:22:42 ]:          species#generation:4-individual:4 fitness = -2
+[ 12/01/2016, 01:22:44 ]:          species#generation:4-individual:5 fitness = 7.12
+[ 12/01/2016, 01:22:45 ]:          species#generation:4-individual:6 fitness = -2
+[ 12/01/2016, 01:22:46 ]:          species#generation:4-individual:7 fitness = -2
+[ 12/01/2016, 01:22:47 ]:          species#generation:4-individual:8 fitness = -2
+[ 12/01/2016, 01:22:48 ]:          species#generation:4-individual:9 fitness = -2
+[ 12/01/2016, 01:22:51 ]:          species#generation:4-individual:10 fitness = 15.2
+[ 12/01/2016, 01:22:53 ]:          species#generation:4-individual:11 fitness = 0.700
+[ 12/01/2016, 01:22:54 ]:          species#generation:4-individual:12 fitness = -2
+[ 12/01/2016, 01:22:55 ]:          species#generation:4-individual:13 fitness = -2
+[ 12/01/2016, 01:22:55 ]:          species#generation:4-individual:14 fitness = -2
+[ 12/01/2016, 01:22:57 ]:          species#generation:4-individual:15 fitness = 1.86
+[ 12/01/2016, 01:22:58 ]:          species#generation:4-individual:16 fitness = -2
+[ 12/01/2016, 01:22:59 ]:          species#generation:4-individual:17 fitness = 0.700
+[ 12/01/2016, 01:23:00 ]:          species#generation:4-individual:18 fitness = -2
+[ 12/01/2016, 01:23:01 ]:          species#generation:4-individual:19 fitness = -2
+[ 12/01/2016, 01:23:01 ]:      Average fitness in generation 4: -0.0865
+[ 12/01/2016, 01:23:01 ]:      Highest fitness in generation 4: 15.2
+[ 12/01/2016, 01:23:10 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:23:10 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:23:10 ]:  Experiment terminated cleanly.
+
+
+[ 12/01/2016, 01:26:20 ]:  Session start.
+[ 12/01/2016, 01:26:21 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 01:26:21 ]:  Initializing Experiment...
+[ 12/01/2016, 01:26:22 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 01:26:22 ]:  Running Experiment...
+[ 12/01/2016, 01:26:22 ]:  Running generation 0...
+[ 12/01/2016, 01:26:23 ]:          species#generation:0-individual:0 fitness = -2.000
+[ 12/01/2016, 01:26:24 ]:          species#generation:0-individual:1 fitness = -2.000
+[ 12/01/2016, 01:26:25 ]:          species#generation:0-individual:2 fitness = -2.000
+[ 12/01/2016, 01:26:25 ]:          species#generation:0-individual:3 fitness = -2.000
+[ 12/01/2016, 01:26:27 ]:          species#generation:0-individual:4 fitness = 0.700
+[ 12/01/2016, 01:26:28 ]:          species#generation:0-individual:5 fitness = 0.700
+[ 12/01/2016, 01:26:29 ]:          species#generation:0-individual:6 fitness = 0.800
+[ 12/01/2016, 01:26:30 ]:          species#generation:0-individual:7 fitness = -2.000
+[ 12/01/2016, 01:26:31 ]:          species#generation:0-individual:8 fitness = -2.000
+[ 12/01/2016, 01:26:32 ]:          species#generation:0-individual:9 fitness = -2.000
+[ 12/01/2016, 01:26:34 ]:          species#generation:0-individual:10 fitness = 0.800
+[ 12/01/2016, 01:26:34 ]:          species#generation:0-individual:11 fitness = -2.000
+[ 12/01/2016, 01:26:35 ]:          species#generation:0-individual:12 fitness = -2.000
+[ 12/01/2016, 01:26:37 ]:          species#generation:0-individual:13 fitness = 0.700
+[ 12/01/2016, 01:26:38 ]:          species#generation:0-individual:14 fitness = -2.000
+[ 12/01/2016, 01:26:39 ]:          species#generation:0-individual:15 fitness = -2.000
+[ 12/01/2016, 01:26:40 ]:          species#generation:0-individual:16 fitness = -2.000
+[ 12/01/2016, 01:26:41 ]:          species#generation:0-individual:17 fitness = 5.161
+[ 12/01/2016, 01:26:42 ]:          species#generation:0-individual:18 fitness = -2.000
+[ 12/01/2016, 01:26:43 ]:          species#generation:0-individual:19 fitness = -2.000
+[ 12/01/2016, 01:26:43 ]:      Average fitness in generation 0: -0.957
+[ 12/01/2016, 01:26:43 ]:      Highest fitness in generation 0: 5.161
+[ 12/01/2016, 01:26:43 ]:  Running generation 1...
+[ 12/01/2016, 01:26:44 ]:          species#generation:1-individual:0 fitness = -2.000
+[ 12/01/2016, 01:26:48 ]:          species#generation:1-individual:1 fitness = 4.245
+[ 12/01/2016, 01:26:50 ]:          species#generation:1-individual:2 fitness = 4.034
+[ 12/01/2016, 01:26:51 ]:          species#generation:1-individual:3 fitness = -2.000
+[ 12/01/2016, 01:26:52 ]:          species#generation:1-individual:4 fitness = -2.000
+[ 12/01/2016, 01:26:53 ]:          species#generation:1-individual:5 fitness = -2.000
+[ 12/01/2016, 01:26:54 ]:          species#generation:1-individual:6 fitness = 0.800
+[ 12/01/2016, 01:26:55 ]:          species#generation:1-individual:7 fitness = -2.000
+[ 12/01/2016, 01:26:56 ]:          species#generation:1-individual:8 fitness = -2.000
+[ 12/01/2016, 01:26:58 ]:          species#generation:1-individual:9 fitness = 0.700
+[ 12/01/2016, 01:26:59 ]:          species#generation:1-individual:10 fitness = -2.000
+[ 12/01/2016, 01:26:59 ]:          species#generation:1-individual:11 fitness = -2.000
+[ 12/01/2016, 01:27:00 ]:          species#generation:1-individual:12 fitness = -2.000
+[ 12/01/2016, 01:27:02 ]:          species#generation:1-individual:13 fitness = 1.860
+[ 12/01/2016, 01:27:06 ]:          species#generation:1-individual:14 fitness = 4.734
+[ 12/01/2016, 01:27:07 ]:          species#generation:1-individual:15 fitness = -2.000
+[ 12/01/2016, 01:27:08 ]:          species#generation:1-individual:16 fitness = -2.000
+[ 12/01/2016, 01:27:09 ]:          species#generation:1-individual:17 fitness = -2.000
+[ 12/01/2016, 01:27:10 ]:          species#generation:1-individual:18 fitness = -2.000
+[ 12/01/2016, 01:27:11 ]:          species#generation:1-individual:19 fitness = 0.800
+[ 12/01/2016, 01:27:11 ]:      Average fitness in generation 1: -0.441
+[ 12/01/2016, 01:27:11 ]:      Highest fitness in generation 1: 4.734
+[ 12/01/2016, 01:27:11 ]:  Running generation 2...
+[ 12/01/2016, 01:27:14 ]:          species#generation:2-individual:0 fitness = 18.522
+[ 12/01/2016, 01:27:15 ]:          species#generation:2-individual:1 fitness = -2.000
+[ 12/01/2016, 01:27:17 ]:          species#generation:2-individual:2 fitness = 1.960
+[ 12/01/2016, 01:27:18 ]:          species#generation:2-individual:3 fitness = -2.000
+[ 12/01/2016, 01:27:19 ]:          species#generation:2-individual:4 fitness = -2.000
+[ 12/01/2016, 01:27:20 ]:          species#generation:2-individual:5 fitness = 0.700
+[ 12/01/2016, 01:27:22 ]:          species#generation:2-individual:6 fitness = 3.034
+[ 12/01/2016, 01:27:25 ]:          species#generation:2-individual:7 fitness = 7.034
+[ 12/01/2016, 01:27:26 ]:          species#generation:2-individual:8 fitness = 2.700
+[ 12/01/2016, 01:27:27 ]:          species#generation:2-individual:9 fitness = 2.700
+[ 12/01/2016, 01:27:28 ]:          species#generation:2-individual:10 fitness = -2.000
+[ 12/01/2016, 01:27:29 ]:          species#generation:2-individual:11 fitness = -2.000
+[ 12/01/2016, 01:27:30 ]:          species#generation:2-individual:12 fitness = -2.000
+[ 12/01/2016, 01:27:31 ]:          species#generation:2-individual:13 fitness = -2.000
+[ 12/01/2016, 01:27:32 ]:          species#generation:2-individual:14 fitness = -2.000
+[ 12/01/2016, 01:27:33 ]:          species#generation:2-individual:15 fitness = -2.000
+[ 12/01/2016, 01:27:34 ]:          species#generation:2-individual:16 fitness = -2.000
+[ 12/01/2016, 01:27:36 ]:          species#generation:2-individual:17 fitness = 7.034
+[ 12/01/2016, 01:27:37 ]:          species#generation:2-individual:18 fitness = 0.700
+[ 12/01/2016, 01:27:38 ]:          species#generation:2-individual:19 fitness = -2.000
+[ 12/01/2016, 01:27:38 ]:      Average fitness in generation 2: 1.119
+[ 12/01/2016, 01:27:38 ]:      Highest fitness in generation 2: 18.522
+[ 12/01/2016, 01:27:38 ]:  Running generation 3...
+[ 12/01/2016, 01:27:39 ]:          species#generation:3-individual:0 fitness = -2.000
+[ 12/01/2016, 01:27:40 ]:          species#generation:3-individual:1 fitness = 3.800
+[ 12/01/2016, 01:27:41 ]:          species#generation:3-individual:2 fitness = -2.000
+[ 12/01/2016, 01:27:42 ]:          species#generation:3-individual:3 fitness = -2.000
+[ 12/01/2016, 01:27:45 ]:          species#generation:3-individual:4 fitness = 6.121
+[ 12/01/2016, 01:27:46 ]:          species#generation:3-individual:5 fitness = 0.700
+[ 12/01/2016, 01:27:48 ]:          species#generation:3-individual:6 fitness = 0.700
+[ 12/01/2016, 01:27:51 ]:          species#generation:3-individual:7 fitness = 15.189
+[ 12/01/2016, 01:27:52 ]:          species#generation:3-individual:8 fitness = -2.000
+[ 12/01/2016, 01:27:53 ]:          species#generation:3-individual:9 fitness = -2.000
+[ 12/01/2016, 01:27:54 ]:          species#generation:3-individual:10 fitness = 1.700
+[ 12/01/2016, 01:27:58 ]:          species#generation:3-individual:11 fitness = 34.221
+[ 12/01/2016, 01:27:59 ]:          species#generation:3-individual:12 fitness = -2.000
+[ 12/01/2016, 01:28:02 ]:          species#generation:3-individual:13 fitness = 9.034
+[ 12/01/2016, 01:28:04 ]:          species#generation:3-individual:14 fitness = 5.221
+[ 12/01/2016, 01:28:05 ]:          species#generation:3-individual:15 fitness = -2.000
+[ 12/01/2016, 01:28:07 ]:          species#generation:3-individual:16 fitness = 0.700
+[ 12/01/2016, 01:28:07 ]:          species#generation:3-individual:17 fitness = -2.000
+[ 12/01/2016, 01:28:08 ]:          species#generation:3-individual:18 fitness = -2.000
+[ 12/01/2016, 01:28:10 ]:          species#generation:3-individual:19 fitness = 0.700
+[ 12/01/2016, 01:28:10 ]:      Average fitness in generation 3: 3.004
+[ 12/01/2016, 01:28:10 ]:      Highest fitness in generation 3: 34.221
+[ 12/01/2016, 01:28:10 ]:  Running generation 4...
+[ 12/01/2016, 01:28:11 ]:          species#generation:4-individual:0 fitness = -2.000
+[ 12/01/2016, 01:28:12 ]:          species#generation:4-individual:1 fitness = 0.700
+[ 12/01/2016, 01:28:13 ]:          species#generation:4-individual:2 fitness = -2.000
+[ 12/01/2016, 01:28:14 ]:          species#generation:4-individual:3 fitness = -2.000
+[ 12/01/2016, 01:28:16 ]:          species#generation:4-individual:4 fitness = 9.034
+[ 12/01/2016, 01:28:18 ]:          species#generation:4-individual:5 fitness = 0.700
+[ 12/01/2016, 01:28:18 ]:          species#generation:4-individual:6 fitness = -2.000
+[ 12/01/2016, 01:28:20 ]:          species#generation:4-individual:7 fitness = 2.011
+[ 12/01/2016, 01:28:21 ]:          species#generation:4-individual:8 fitness = -2.000
+[ 12/01/2016, 01:28:22 ]:          species#generation:4-individual:9 fitness = -2.000
+[ 12/01/2016, 01:28:23 ]:          species#generation:4-individual:10 fitness = 0.800
+[ 12/01/2016, 01:28:25 ]:          species#generation:4-individual:11 fitness = 0.800
+[ 12/01/2016, 01:28:26 ]:          species#generation:4-individual:12 fitness = -2.000
+[ 12/01/2016, 01:28:27 ]:          species#generation:4-individual:13 fitness = 0.700
+[ 12/01/2016, 01:28:28 ]:          species#generation:4-individual:14 fitness = -2.000
+[ 12/01/2016, 01:28:29 ]:          species#generation:4-individual:15 fitness = -2.000
+[ 12/01/2016, 01:28:30 ]:          species#generation:4-individual:16 fitness = -2.000
+[ 12/01/2016, 01:28:31 ]:          species#generation:4-individual:17 fitness = -2.000
+[ 12/01/2016, 01:28:32 ]:          species#generation:4-individual:18 fitness = -2.000
+[ 12/01/2016, 01:28:32 ]:          species#generation:4-individual:19 fitness = -2.000
+[ 12/01/2016, 01:28:32 ]:      Average fitness in generation 4: -0.563
+[ 12/01/2016, 01:28:33 ]:      Highest fitness in generation 4: 9.034
+[ 12/01/2016, 01:28:36 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:28:36 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:28:36 ]:  Experiment terminated cleanly.
+
+
+[ 12/01/2016, 01:30:33 ]:  Session start.
+[ 12/01/2016, 01:30:34 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/01/2016, 01:30:34 ]:  Initializing Experiment...
+[ 12/01/2016, 01:30:34 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/01/2016, 01:30:34 ]:  Running Experiment...
+[ 12/01/2016, 01:30:34 ]:  Running generation 0...
+[ 12/01/2016, 01:30:35 ]:          species#generation:0-individual:0 fitness = 0.700
+[ 12/01/2016, 01:30:36 ]:          species#generation:0-individual:1 fitness = -2.000
+[ 12/01/2016, 01:30:38 ]:          species#generation:0-individual:2 fitness = 0.800
+[ 12/01/2016, 01:30:39 ]:          species#generation:0-individual:3 fitness = 0.800
+[ 12/01/2016, 01:30:40 ]:          species#generation:0-individual:4 fitness = 0.700
+[ 12/01/2016, 01:30:42 ]:          species#generation:0-individual:5 fitness = 0.700
+[ 12/01/2016, 01:30:43 ]:          species#generation:0-individual:6 fitness = 0.700
+[ 12/01/2016, 01:30:46 ]:          species#generation:0-individual:7 fitness = 10.372
+[ 12/01/2016, 01:30:47 ]:          species#generation:0-individual:8 fitness = 0.800
+[ 12/01/2016, 01:30:48 ]:          species#generation:0-individual:9 fitness = 0.700
+[ 12/01/2016, 01:30:50 ]:          species#generation:0-individual:10 fitness = 0.700
+[ 12/01/2016, 01:30:52 ]:          species#generation:0-individual:11 fitness = 1.960
+[ 12/01/2016, 01:30:53 ]:          species#generation:0-individual:12 fitness = 0.800
+[ 12/01/2016, 01:30:54 ]:          species#generation:0-individual:13 fitness = 0.700
+[ 12/01/2016, 01:30:55 ]:          species#generation:0-individual:14 fitness = -2.000
+[ 12/01/2016, 01:30:57 ]:          species#generation:0-individual:15 fitness = 0.800
+[ 12/01/2016, 01:30:57 ]:          species#generation:0-individual:16 fitness = -2.000
+[ 12/01/2016, 01:30:58 ]:          species#generation:0-individual:17 fitness = -2.000
+[ 12/01/2016, 01:30:59 ]:          species#generation:0-individual:18 fitness = -2.000
+[ 12/01/2016, 01:31:00 ]:          species#generation:0-individual:19 fitness = -2.000
+[ 12/01/2016, 01:31:00 ]:      Average fitness in generation 0: 0.462
+[ 12/01/2016, 01:31:00 ]:      Highest fitness in generation 0: 10.372
+[ 12/01/2016, 01:31:00 ]:  Running generation 1...
+[ 12/01/2016, 01:31:01 ]:          species#generation:1-individual:0 fitness = -2.000
+[ 12/01/2016, 01:31:02 ]:          species#generation:1-individual:1 fitness = -2.000
+[ 12/01/2016, 01:31:03 ]:          species#generation:1-individual:2 fitness = -2.000
+[ 12/01/2016, 01:31:04 ]:          species#generation:1-individual:3 fitness = 0.800
+[ 12/01/2016, 01:31:05 ]:          species#generation:1-individual:4 fitness = -2.000
+[ 12/01/2016, 01:31:06 ]:          species#generation:1-individual:5 fitness = -2.000
+[ 12/01/2016, 01:31:08 ]:          species#generation:1-individual:6 fitness = 0.700
+[ 12/01/2016, 01:31:09 ]:          species#generation:1-individual:7 fitness = -2.000
+[ 12/01/2016, 01:31:10 ]:          species#generation:1-individual:8 fitness = 0.800
+[ 12/01/2016, 01:31:13 ]:          species#generation:1-individual:9 fitness = 7.121
+[ 12/01/2016, 01:31:13 ]:          species#generation:1-individual:10 fitness = -2.000
+[ 12/01/2016, 01:31:14 ]:          species#generation:1-individual:11 fitness = -2.000
+[ 12/01/2016, 01:31:16 ]:          species#generation:1-individual:12 fitness = 0.800
+[ 12/01/2016, 01:31:17 ]:          species#generation:1-individual:13 fitness = 0.700
+[ 12/01/2016, 01:31:18 ]:          species#generation:1-individual:14 fitness = 0.800
+[ 12/01/2016, 01:31:20 ]:          species#generation:1-individual:15 fitness = 0.700
+[ 12/01/2016, 01:31:21 ]:          species#generation:1-individual:16 fitness = -2.000
+[ 12/01/2016, 01:31:21 ]:          species#generation:1-individual:17 fitness = -2.000
+[ 12/01/2016, 01:31:22 ]:          species#generation:1-individual:18 fitness = -2.000
+[ 12/01/2016, 01:31:23 ]:          species#generation:1-individual:19 fitness = -2.000
+[ 12/01/2016, 01:31:23 ]:      Average fitness in generation 1: -0.579
+[ 12/01/2016, 01:31:23 ]:      Highest fitness in generation 1: 7.121
+[ 12/01/2016, 01:31:23 ]:  Running generation 2...
+[ 12/01/2016, 01:31:24 ]:          species#generation:2-individual:0 fitness = -2.000
+[ 12/01/2016, 01:31:26 ]:          species#generation:2-individual:1 fitness = 0.700
+[ 12/01/2016, 01:31:30 ]:          species#generation:2-individual:2 fitness = 17.500
+[ 12/01/2016, 01:31:32 ]:          species#generation:2-individual:3 fitness = 0.700
+[ 12/01/2016, 01:31:33 ]:          species#generation:2-individual:4 fitness = -2.000
+[ 12/01/2016, 01:31:35 ]:          species#generation:2-individual:5 fitness = 5.911
+[ 12/01/2016, 01:31:36 ]:          species#generation:2-individual:6 fitness = 0.700
+[ 12/01/2016, 01:31:37 ]:          species#generation:2-individual:7 fitness = 0.700
+[ 12/01/2016, 01:31:38 ]:          species#generation:2-individual:8 fitness = -2.000
+[ 12/01/2016, 01:31:39 ]:          species#generation:2-individual:9 fitness = -2.000
+[ 12/01/2016, 01:31:40 ]:          species#generation:2-individual:10 fitness = 0.700
+[ 12/01/2016, 01:31:41 ]:          species#generation:2-individual:11 fitness = -2.000
+[ 12/01/2016, 01:31:42 ]:          species#generation:2-individual:12 fitness = -2.000
+[ 12/01/2016, 01:31:44 ]:          species#generation:2-individual:13 fitness = 6.134
+[ 12/01/2016, 01:31:45 ]:          species#generation:2-individual:14 fitness = -2.000
+[ 12/01/2016, 01:31:46 ]:          species#generation:2-individual:15 fitness = -2.000
+[ 12/01/2016, 01:31:47 ]:          species#generation:2-individual:16 fitness = -2.000
+[ 12/01/2016, 01:31:51 ]:          species#generation:2-individual:17 fitness = 8.801
+[ 12/01/2016, 01:31:52 ]:          species#generation:2-individual:18 fitness = 0.800
+[ 12/01/2016, 01:31:53 ]:          species#generation:2-individual:19 fitness = -2.000
+[ 12/01/2016, 01:31:53 ]:      Average fitness in generation 2: 1.132
+[ 12/01/2016, 01:31:53 ]:      Highest fitness in generation 2: 17.500
+[ 12/01/2016, 01:31:53 ]:  Running generation 3...
+[ 12/01/2016, 01:31:54 ]:          species#generation:3-individual:0 fitness = -2.000
+[ 12/01/2016, 01:31:55 ]:          species#generation:3-individual:1 fitness = -2.000
+[ 12/01/2016, 01:31:56 ]:          species#generation:3-individual:2 fitness = 0.700
+[ 12/01/2016, 01:31:58 ]:          species#generation:3-individual:3 fitness = 0.700
+[ 12/01/2016, 01:31:59 ]:          species#generation:3-individual:4 fitness = -2.000
+[ 12/01/2016, 01:32:00 ]:          species#generation:3-individual:5 fitness = -2.000
+[ 12/01/2016, 01:32:01 ]:          species#generation:3-individual:6 fitness = -2.000
+[ 12/01/2016, 01:32:01 ]:          species#generation:3-individual:7 fitness = -2.000
+[ 12/01/2016, 01:32:02 ]:          species#generation:3-individual:8 fitness = -2.000
+[ 12/01/2016, 01:32:03 ]:          species#generation:3-individual:9 fitness = -2.000
+[ 12/01/2016, 01:32:04 ]:          species#generation:3-individual:10 fitness = -2.000
+[ 12/01/2016, 01:32:06 ]:          species#generation:3-individual:11 fitness = 0.800
+[ 12/01/2016, 01:32:06 ]:          species#generation:3-individual:12 fitness = -2.000
+[ 12/01/2016, 01:32:07 ]:          species#generation:3-individual:13 fitness = -2.000
+[ 12/01/2016, 01:32:08 ]:          species#generation:3-individual:14 fitness = -2.000
+[ 12/01/2016, 01:32:09 ]:          species#generation:3-individual:15 fitness = -2.000
+[ 12/01/2016, 01:32:10 ]:          species#generation:3-individual:16 fitness = -2.000
+[ 12/01/2016, 01:32:11 ]:          species#generation:3-individual:17 fitness = -2.000
+[ 12/01/2016, 01:32:12 ]:          species#generation:3-individual:18 fitness = 0.800
+[ 12/01/2016, 01:32:14 ]:          species#generation:3-individual:19 fitness = 0.700
+[ 12/01/2016, 01:32:14 ]:      Average fitness in generation 3: -1.315
+[ 12/01/2016, 01:32:14 ]:      Highest fitness in generation 3: 0.800
+[ 12/01/2016, 01:32:14 ]:  Running generation 4...
+[ 12/01/2016, 01:32:15 ]:          species#generation:4-individual:0 fitness = -2.000
+[ 12/01/2016, 01:32:16 ]:          species#generation:4-individual:1 fitness = -2.000
+[ 12/01/2016, 01:32:17 ]:          species#generation:4-individual:2 fitness = -2.000
+[ 12/01/2016, 01:32:18 ]:          species#generation:4-individual:3 fitness = 0.700
+[ 12/01/2016, 01:32:19 ]:          species#generation:4-individual:4 fitness = -2.000
+[ 12/01/2016, 01:32:20 ]:          species#generation:4-individual:5 fitness = 0.700
+[ 12/01/2016, 01:32:21 ]:          species#generation:4-individual:6 fitness = -2.000
+[ 12/01/2016, 01:32:22 ]:          species#generation:4-individual:7 fitness = -2.000
+[ 12/01/2016, 01:32:23 ]:          species#generation:4-individual:8 fitness = -2.000
+[ 12/01/2016, 01:32:25 ]:          species#generation:4-individual:9 fitness = 2.011
+[ 12/01/2016, 01:32:26 ]:          species#generation:4-individual:10 fitness = 0.700
+[ 12/01/2016, 01:32:28 ]:          species#generation:4-individual:11 fitness = 0.700
+[ 12/01/2016, 01:32:30 ]:          species#generation:4-individual:12 fitness = 5.121
+[ 12/01/2016, 01:32:31 ]:          species#generation:4-individual:13 fitness = -2.000
+[ 12/01/2016, 01:32:32 ]:          species#generation:4-individual:14 fitness = -2.000
+[ 12/01/2016, 01:32:33 ]:          species#generation:4-individual:15 fitness = -2.000
+[ 12/01/2016, 01:32:34 ]:          species#generation:4-individual:16 fitness = -2.000
+[ 12/01/2016, 01:32:35 ]:          species#generation:4-individual:17 fitness = 0.800
+[ 12/01/2016, 01:32:36 ]:          species#generation:4-individual:18 fitness = -2.000
+[ 12/01/2016, 01:32:38 ]:          species#generation:4-individual:19 fitness = 0.700
+[ 12/01/2016, 01:32:38 ]:      Average fitness in generation 4: -0.628
+[ 12/01/2016, 01:32:38 ]:      Highest fitness in generation 4: 5.121
+[ 12/01/2016, 01:32:38 ]:  Writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:32:38 ]:  Done writing speciation data to file: ancestor.species
+[ 12/01/2016, 01:32:38 ]:  Experiment terminated cleanly.
+
+
+[ 12/03/2016, 12:41:13 ]:  Session start.
+[ 12/03/2016, 12:41:13 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/03/2016, 12:41:13 ]:  Initializing Experiment...
+[ 12/03/2016, 12:41:13 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/03/2016, 12:41:13 ]:  Running Experiment...
+[ 12/03/2016, 12:41:13 ]:  Running generation 0...
+[ 12/03/2016, 12:41:15 ]:          species#generation:0-individual:0 fitness = 4.911
+[ 12/03/2016, 12:41:16 ]:          species#generation:0-individual:1 fitness = -2.000
+[ 12/03/2016, 12:41:19 ]:          species#generation:0-individual:2 fitness = 7.522
+[ 12/03/2016, 12:41:20 ]:          species#generation:0-individual:3 fitness = -2.000
+[ 12/03/2016, 12:41:21 ]:          species#generation:0-individual:4 fitness = -2.000
+[ 12/03/2016, 12:41:22 ]:          species#generation:0-individual:5 fitness = 0.800
+[ 12/03/2016, 12:41:23 ]:          species#generation:0-individual:6 fitness = -2.000
+[ 12/03/2016, 12:41:24 ]:          species#generation:0-individual:7 fitness = -2.000
+[ 12/03/2016, 12:41:26 ]:          species#generation:0-individual:8 fitness = 4.011
+[ 12/03/2016, 12:41:27 ]:          species#generation:0-individual:9 fitness = 0.700
+[ 12/03/2016, 12:41:28 ]:          species#generation:0-individual:10 fitness = 0.700
+[ 12/03/2016, 12:41:29 ]:          species#generation:0-individual:11 fitness = -2.000
+[ 12/03/2016, 12:41:30 ]:          species#generation:0-individual:12 fitness = -2.000
+[ 12/03/2016, 12:41:31 ]:          species#generation:0-individual:13 fitness = -2.000
+[ 12/03/2016, 12:41:32 ]:          species#generation:0-individual:14 fitness = -2.000
+[ 12/03/2016, 12:41:33 ]:          species#generation:0-individual:15 fitness = -2.000
+[ 12/03/2016, 12:41:34 ]:          species#generation:0-individual:16 fitness = 0.800
+[ 12/03/2016, 12:41:35 ]:          species#generation:0-individual:17 fitness = -2.000
+[ 12/03/2016, 12:41:36 ]:          species#generation:0-individual:18 fitness = -2.000
+[ 12/03/2016, 12:41:37 ]:          species#generation:0-individual:19 fitness = -2.000
+[ 12/03/2016, 12:41:37 ]:      Average fitness in generation 0: -0.328
+[ 12/03/2016, 12:41:37 ]:      Highest fitness in generation 0: 7.522
+[ 12/03/2016, 12:41:37 ]:  Running generation 1...
+[ 12/03/2016, 12:41:38 ]:          species#generation:1-individual:0 fitness = -2.000
+[ 12/03/2016, 12:41:39 ]:          species#generation:1-individual:1 fitness = -2.000
+[ 12/03/2016, 12:41:40 ]:          species#generation:1-individual:2 fitness = 0.700
+[ 12/03/2016, 12:43:34 ]:  Session start.
+[ 12/03/2016, 12:43:34 ]:  Attempting to load speciation data from file: ancestor.species
+[ 12/03/2016, 12:43:34 ]:  Initializing Experiment...
+[ 12/03/2016, 12:43:35 ]:  Successfully loaded speciation data from file: ancestor.species
+[ 12/03/2016, 12:43:35 ]:  Running Experiment...
+[ 12/03/2016, 12:43:35 ]:  Running generation 0...
+[ 12/03/2016, 12:43:37 ]:          species#generation:0-individual:0 fitness = 7.034
+[ 12/03/2016, 12:43:38 ]:          species#generation:0-individual:1 fitness = -2.000
+[ 12/03/2016, 12:43:39 ]:          species#generation:0-individual:2 fitness = -2.000
+[ 12/03/2016, 12:43:40 ]:          species#generation:0-individual:3 fitness = -2.000
+[ 12/03/2016, 12:43:43 ]:          species#generation:0-individual:4 fitness = 4.134
+[ 12/03/2016, 12:43:44 ]:          species#generation:0-individual:5 fitness = -2.000
+[ 12/03/2016, 12:43:46 ]:          species#generation:0-individual:6 fitness = 12.373
+[ 12/03/2016, 12:43:47 ]:          species#generation:0-individual:7 fitness = -2.000
+[ 12/03/2016, 12:43:48 ]:          species#generation:0-individual:8 fitness = -2.000
+[ 12/03/2016, 12:43:49 ]:          species#generation:0-individual:9 fitness = -2.000
+[ 12/03/2016, 12:43:51 ]:          species#generation:0-individual:10 fitness = 2.911
+[ 12/03/2016, 12:43:53 ]:          species#generation:0-individual:11 fitness = 0.700
+[ 12/03/2016, 12:43:54 ]:          species#generation:0-individual:12 fitness = -2.000
+[ 12/03/2016, 12:43:59 ]:          species#generation:0-individual:13 fitness = 22.853
+[ 12/03/2016, 12:44:00 ]:          species#generation:0-individual:14 fitness = -2.000
+[ 12/03/2016, 12:44:02 ]:          species#generation:0-individual:15 fitness = 0.800
+[ 12/03/2016, 12:44:03 ]:          species#generation:0-individual:16 fitness = -2.000
+[ 12/03/2016, 12:44:04 ]:          species#generation:0-individual:17 fitness = -2.000
+[ 12/03/2016, 12:44:06 ]:          species#generation:0-individual:18 fitness = 9.373
+[ 12/03/2016, 12:44:07 ]:          species#generation:0-individual:19 fitness = -2.000
+[ 12/03/2016, 12:44:07 ]:      Average fitness in generation 0: 1.809
+[ 12/03/2016, 12:44:07 ]:      Highest fitness in generation 0: 22.853
+[ 12/03/2016, 12:44:07 ]:  Running generation 1...
+[ 12/03/2016, 12:44:08 ]:          species#generation:1-individual:0 fitness = 0.700
+[ 12/03/2016, 12:44:09 ]:          species#generation:1-individual:1 fitness = -2.000
+[ 12/03/2016, 12:44:10 ]:          species#generation:1-individual:2 fitness = -2.000
+[ 12/03/2016, 12:44:11 ]:          species#generation:1-individual:3 fitness = -2.000
+[ 12/03/2016, 12:44:12 ]:          species#generation:1-individual:4 fitness = -2.000
+[ 12/03/2016, 12:44:14 ]:          species#generation:1-individual:5 fitness = 0.700
+[ 12/03/2016, 12:44:15 ]:          species#generation:1-individual:6 fitness = -2.000
+[ 12/03/2016, 12:44:17 ]:          species#generation:1-individual:7 fitness = 8.373
+[ 12/03/2016, 12:44:18 ]:          species#generation:1-individual:8 fitness = 0.800
+[ 12/03/2016, 12:44:21 ]:          species#generation:1-individual:9 fitness = 9.373
+[ 12/03/2016, 12:44:22 ]:          species#generation:1-individual:10 fitness = -2.000
+[ 12/03/2016, 12:44:23 ]:          species#generation:1-individual:11 fitness = -2.000
+[ 12/03/2016, 12:44:24 ]:          species#generation:1-individual:12 fitness = -2.000
+[ 12/03/2016, 12:44:25 ]:          species#generation:1-individual:13 fitness = -2.000
+[ 12/03/2016, 12:44:26 ]:          species#generation:1-individual:14 fitness = -2.000
+[ 12/03/2016, 12:44:27 ]:          species#generation:1-individual:15 fitness = -2.000
+[ 12/03/2016, 12:44:28 ]:          species#generation:1-individual:16 fitness = -2.000
+[ 12/03/2016, 12:44:29 ]:          species#generation:1-individual:17 fitness = -2.000
+[ 12/03/2016, 12:44:30 ]:          species#generation:1-individual:18 fitness = 0.700
+[ 12/03/2016, 12:44:31 ]:          species#generation:1-individual:19 fitness = -2.000
+[ 12/03/2016, 12:44:31 ]:      Average fitness in generation 1: -0.368
+[ 12/03/2016, 12:44:31 ]:      Highest fitness in generation 1: 9.373
+[ 12/03/2016, 12:44:31 ]:  Running generation 2...
+[ 12/03/2016, 12:44:32 ]:          species#generation:2-individual:0 fitness = -2.000
+[ 12/03/2016, 12:44:33 ]:          species#generation:2-individual:1 fitness = -2.000
+[ 12/03/2016, 12:44:35 ]:          species#generation:2-individual:2 fitness = 9.034
+[ 12/03/2016, 12:44:36 ]:          species#generation:2-individual:3 fitness = -2.000
+[ 12/03/2016, 12:44:37 ]:          species#generation:2-individual:4 fitness = -2.000
+[ 12/03/2016, 12:44:38 ]:          species#generation:2-individual:5 fitness = -2.000
+[ 12/03/2016, 12:44:39 ]:          species#generation:2-individual:6 fitness = -2.000
+[ 12/03/2016, 12:44:40 ]:          species#generation:2-individual:7 fitness = -2.000
+[ 12/03/2016, 12:44:42 ]:          species#generation:2-individual:8 fitness = 0.700
+[ 12/03/2016, 12:44:44 ]:          species#generation:2-individual:9 fitness = 9.034
+[ 12/03/2016, 12:44:45 ]:          species#generation:2-individual:10 fitness = -2.000
+[ 12/03/2016, 12:44:46 ]:          species#generation:2-individual:11 fitness = -2.000
+[ 12/03/2016, 12:44:47 ]:          species#generation:2-individual:12 fitness = 0.800
+[ 12/03/2016, 12:44:48 ]:          species#generation:2-individual:13 fitness = -2.000
+[ 12/03/2016, 12:44:50 ]:          species#generation:2-individual:14 fitness = 0.800
+[ 12/03/2016, 12:44:51 ]:          species#generation:2-individual:15 fitness = 0.700
+[ 12/03/2016, 12:44:52 ]:          species#generation:2-individual:16 fitness = -2.000
+[ 12/03/2016, 12:44:53 ]:          species#generation:2-individual:17 fitness = -2.000
+[ 12/03/2016, 12:44:55 ]:          species#generation:2-individual:18 fitness = 0.700
+[ 12/03/2016, 12:44:56 ]:          species#generation:2-individual:19 fitness = -2.000
+[ 12/03/2016, 12:44:56 ]:      Average fitness in generation 2: -0.212
+[ 12/03/2016, 12:44:56 ]:      Highest fitness in generation 2: 9.034
+[ 12/03/2016, 12:44:56 ]:  Running generation 3...
+[ 12/03/2016, 12:44:58 ]:          species#generation:3-individual:0 fitness = 4.911
+[ 12/03/2016, 12:44:59 ]:          species#generation:3-individual:1 fitness = -2.000
+[ 12/03/2016, 12:45:00 ]:          species#generation:3-individual:2 fitness = -2.000
+[ 12/03/2016, 12:45:01 ]:          species#generation:3-individual:3 fitness = 0.700
+[ 12/03/2016, 12:45:02 ]:          species#generation:3-individual:4 fitness = -2.000
+[ 12/03/2016, 12:45:03 ]:          species#generation:3-individual:5 fitness = -2.000
+[ 12/03/2016, 12:45:05 ]:          species#generation:3-individual:6 fitness = 7.034
+[ 12/03/2016, 12:45:06 ]:          species#generation:3-individual:7 fitness = -2.000
+[ 12/03/2016, 12:45:08 ]:          species#generation:3-individual:8 fitness = 5.161
+[ 12/03/2016, 12:45:09 ]:          species#generation:3-individual:9 fitness = -2.000
+[ 12/03/2016, 12:45:11 ]:          species#generation:3-individual:10 fitness = 10.860
+[ 12/03/2016, 12:45:12 ]:          species#generation:3-individual:11 fitness = -2.000
+[ 12/03/2016, 12:45:13 ]:          species#generation:3-individual:12 fitness = -2.000
+[ 12/03/2016, 12:45:14 ]:          species#generation:3-individual:13 fitness = 0.700
+[ 12/03/2016, 12:45:16 ]:          species#generation:3-individual:14 fitness = 0.800
+[ 12/03/2016, 12:45:17 ]:          species#generation:3-individual:15 fitness = 0.700
+[ 12/03/2016, 12:45:18 ]:          species#generation:3-individual:16 fitness = -2.000
+[ 12/03/2016, 12:45:20 ]:          species#generation:3-individual:17 fitness = 1.960
+[ 12/03/2016, 12:45:21 ]:          species#generation:3-individual:18 fitness = -2.000
+[ 12/03/2016, 12:45:22 ]:          species#generation:3-individual:19 fitness = 0.800
+[ 12/03/2016, 12:45:22 ]:      Average fitness in generation 3: 0.681
+[ 12/03/2016, 12:45:22 ]:      Highest fitness in generation 3: 10.860
+[ 12/03/2016, 12:45:23 ]:  Running generation 4...
+[ 12/03/2016, 12:45:24 ]:          species#generation:4-individual:0 fitness = 0.700
+[ 12/03/2016, 12:45:25 ]:          species#generation:4-individual:1 fitness = -2.000
+[ 12/03/2016, 12:45:26 ]:          species#generation:4-individual:2 fitness = -2.000
+[ 12/03/2016, 12:45:28 ]:          species#generation:4-individual:3 fitness = 7.034
+[ 12/03/2016, 12:45:30 ]:          species#generation:4-individual:4 fitness = 0.800
+[ 12/03/2016, 12:45:31 ]:          species#generation:4-individual:5 fitness = -2.000
+[ 12/03/2016, 12:45:32 ]:          species#generation:4-individual:6 fitness = -2.000
+[ 12/03/2016, 12:45:33 ]:          species#generation:4-individual:7 fitness = -2.000
+[ 12/03/2016, 12:45:34 ]:          species#generation:4-individual:8 fitness = 0.700
+[ 12/03/2016, 12:45:36 ]:          species#generation:4-individual:9 fitness = 2.911
+[ 12/03/2016, 12:45:37 ]:          species#generation:4-individual:10 fitness = -2.000
+[ 12/03/2016, 12:45:39 ]:          species#generation:4-individual:11 fitness = 7.373
+[ 12/03/2016, 12:45:40 ]:          species#generation:4-individual:12 fitness = -2.000
+[ 12/03/2016, 12:45:41 ]:          species#generation:4-individual:13 fitness = -2.000
+[ 12/03/2016, 12:45:42 ]:          species#generation:4-individual:14 fitness = -2.000
+[ 12/03/2016, 12:45:43 ]:          species#generation:4-individual:15 fitness = -2.000
+[ 12/03/2016, 12:45:47 ]:          species#generation:4-individual:16 fitness = 5.289
+[ 12/03/2016, 12:45:48 ]:          species#generation:4-individual:17 fitness = -2.000
+[ 12/03/2016, 12:45:49 ]:          species#generation:4-individual:18 fitness = -2.000
+[ 12/03/2016, 12:45:50 ]:          species#generation:4-individual:19 fitness = 0.700
+[ 12/03/2016, 12:45:50 ]:      Average fitness in generation 4: 0.075
+[ 12/03/2016, 12:45:50 ]:      Highest fitness in generation 4: 7.373
+[ 12/03/2016, 12:45:50 ]:  Writing speciation data to file: ancestor.species
+[ 12/03/2016, 12:45:50 ]:  Done writing speciation data to file: ancestor.species
+[ 12/03/2016, 12:45:50 ]:  Experiment terminated cleanly.
+
+
