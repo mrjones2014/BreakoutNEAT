@@ -5,7 +5,7 @@ import sys
 
 pygame.init()
 clock = pygame.time.Clock()
-screen = pygame.display.set_mode((width, height))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.key.set_repeat(1, 30)
 game = Breakout(screen)
 while 1:

@@ -13,8 +13,8 @@ class Wall(object):
         xpos = 0
         ypos = 60
         adj = 0
-        for i in range(0, num_bricks):
-            if xpos > width:
+        for i in range(0, NUM_BRICKS):
+            if xpos > WIDTH:
                 if adj == 0:
                     adj = self.brick_length / 2
                 else:
