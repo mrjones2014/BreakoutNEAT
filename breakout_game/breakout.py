@@ -11,20 +11,20 @@ import numpy
 class Breakout(object):
     def __init__(self, screen):
         # fields needed for the game itself
-        self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), bgcolor)
+        self.game_over_msg = pygame.font.Font(None, 70).render("Game Over", True, (0, 255, 255), BG_COLOR)
         self.game_over = False
         self.time = 0
         self.paddle = Paddle()
-        self.paddle.hitbox.move((width / 2) - (self.paddle.hitbox.right / 2), height - 20)
+        self.paddle.hitbox.move((WIDTH / 2) - (self.paddle.hitbox.right / 2), HEIGHT - 20)
         self.ball = Ball()
-        self.ball.hitbox.center = (width / 2, height / 2)
+        self.ball.hitbox.center = (WIDTH / 2, HEIGHT / 2)
         self.init_ball_x_speed = 4
         self.init_ball_y_speed = 4
         self.ball.dx = self.init_ball_x_speed
         self.ball.dy = self.init_ball_y_speed
         self.wall = Wall()
         self.score = 0
-        self.lives = init_lives
+        self.lives = INIT_LIVES
         self.screen = screen
         self.arrow_char = " - "
 
@@ -45,7 +45,7 @@ class Breakout(object):
                     self.stale_frame_count += 1
                 else:
                     self.stale_frame_count = 0
-            if self.stale_frame_count > max_stale_frames:
+            if self.stale_frame_count > MAX_STALE_FRAMES:
                 self.stale = True
                 self.ball.cause_miss()
             else:
@@ -53,11 +53,11 @@ class Breakout(object):
             self.prev_ball_location = (self.ball.hitbox.center[0], self.ball.hitbox.center[1])
             self.time += 1
 
-            self.total_paddle_offset_from_center += numpy.abs((width / 2) - self.paddle_center())
+            self.total_paddle_offset_from_center += numpy.abs((WIDTH / 2) - self.paddle_center())
             self.avg_paddle_offset_from_center = self.total_paddle_offset_from_center / self.time
 
-        if self.ball.hitbox.top > height and self.lives > 0:
-            index = init_lives - self.lives
+        if self.ball.hitbox.top > HEIGHT and self.lives > 0:
+            index = INIT_LIVES - self.lives
             self.lives -= 1
             if index == 0:
                 self.hits_per_life.append(self.num_times_hit_paddle)
@@ -68,7 +68,7 @@ class Breakout(object):
                 self.ball.dx *= -1
             self.ball.dy = self.init_ball_y_speed
             if self.lives > 0:
-                self.ball.hitbox.center = width * random.random(), height / 3
+                self.ball.hitbox.center = WIDTH * random.random(), HEIGHT / 3
         if self.lives > 0:
             index = self.ball.hitbox.collidelist(self.wall.get_hitboxes())
             if index != -1:
@@ -85,26 +85,26 @@ class Breakout(object):
                 self.num_times_hit_paddle += 1
             self.ball.move()
 
-        self.screen.fill(bgcolor)
+        self.screen.fill(BG_COLOR)
         if self.lives <= 0:
             self.game_over = True
             msg_rect = self.game_over_msg.get_rect()
-            msg_rect = msg_rect.move(width / 2 - (msg_rect.center[0]), height / 3)
+            msg_rect = msg_rect.move(WIDTH / 2 - (msg_rect.center[0]), HEIGHT / 3)
             self.screen.blit(self.game_over_msg, msg_rect)
 
-        lives_msg = pygame.font.Font(None, 40).render("Lives: " + str(self.lives), True, (0, 255, 255), bgcolor)
+        lives_msg = pygame.font.Font(None, 40).render("Lives: " + str(self.lives), True, (0, 255, 255), BG_COLOR)
         lives_msg_rect = lives_msg.get_rect()
         lives_msg_rect = lives_msg_rect.move(0, 0)
         self.screen.blit(lives_msg, lives_msg_rect)
 
-        arrow_indicator = pygame.font.Font(None, 40).render("Output: " + self.arrow_char, True, (0, 255, 255), bgcolor)
+        arrow_indicator = pygame.font.Font(None, 40).render("Output: " + self.arrow_char, True, (0, 255, 255), BG_COLOR)
         arrow_rect = arrow_indicator.get_rect()
-        arrow_rect = arrow_rect.move((width / 2) - (arrow_rect.right / 2), 0)
+        arrow_rect = arrow_rect.move((WIDTH / 2) - (arrow_rect.right / 2), 0)
         self.screen.blit(arrow_indicator, arrow_rect)
 
-        score_text = pygame.font.Font(None, 40).render("Score: " + str(self.score), True, (0, 255, 255), bgcolor)
+        score_text = pygame.font.Font(None, 40).render("Score: " + str(self.score), True, (0, 255, 255), BG_COLOR)
         score_text_rect = score_text.get_rect()
-        score_text_rect = score_text_rect.move(width - score_text_rect.right, 0)
+        score_text_rect = score_text_rect.move(WIDTH - score_text_rect.right, 0)
         self.screen.blit(score_text, score_text_rect)
 
         for i in range(0, len(self.wall.bricks)):
@@ -114,7 +114,7 @@ class Breakout(object):
             self.wall.build_wall()
             self.ball.dx = self.init_ball_x_speed
             self.ball.dy = self.init_ball_y_speed
-            self.ball.hitbox.center = width / 2, height / 3
+            self.ball.hitbox.center = WIDTH / 2, HEIGHT / 3
             self.paddle.__init__()
 
         self.screen.blit(self.ball.image, self.ball.hitbox)

@@ -6,19 +6,19 @@ class Paddle(object):
     def __init__(self):
         self.image = pygame.image.load("../assets/bat.png")
         self.hitbox = self.image.get_rect()
-        self.hitbox = self.hitbox.move((width / 2) - (self.hitbox.right / 2), height - self.hitbox.bottom)
+        self.hitbox = self.hitbox.move((WIDTH / 2) - (self.hitbox.right / 2), HEIGHT - self.hitbox.bottom)
 
     def move_left(self):
         if self.hitbox.left > 0:
-            self.hitbox.center = (self.hitbox.center[0] - paddle_speed, self.hitbox.center[1])
+            self.hitbox.center = (self.hitbox.center[0] - PADDLE_SPEED, self.hitbox.center[1])
         if self.hitbox.left < 0:
             self.hitbox.center = (0, self.hitbox.center[1])
         return self.hitbox.center[0]
 
     def move_right(self):
-        if self.hitbox.right < width:
-            self.hitbox.center = (self.hitbox.center[0] + paddle_speed, self.hitbox.center[1])
-        while self.hitbox.right > width:
+        if self.hitbox.right < WIDTH:
+            self.hitbox.center = (self.hitbox.center[0] + PADDLE_SPEED, self.hitbox.center[1])
+        while self.hitbox.right > WIDTH:
             self.hitbox.center = (self.hitbox.center[0] - 1, self.hitbox.center[1])
         return self.hitbox.center[0]
 

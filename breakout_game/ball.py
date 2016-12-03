@@ -11,14 +11,14 @@ class Ball(object):
         self.dy = 0
 
     def move(self):
-        if self.hitbox.left < 0 or self.hitbox.right > width:
+        if self.hitbox.left < 0 or self.hitbox.right > WIDTH:
             self.dx *= -1
         if self.hitbox.top < 0:
             self.dy *= -1
         self.hitbox.center = (self.hitbox.center[0] + self.dx, self.hitbox.center[1] + self.dy)
 
     def cause_miss(self):
-        self.hitbox.center = (self.hitbox.center[0], height + 100)
+        self.hitbox.center = (self.hitbox.center[0], HEIGHT + 100)
 
     def distance_to(self, x_other, y_other):
         return numpy.sqrt(numpy.power((self.hitbox.x - x_other), 2) + numpy.power((self.hitbox.y - y_other), 2))

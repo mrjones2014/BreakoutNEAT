@@ -21,7 +21,7 @@ class Experiment(object):
         self.current_best_species = None
 
     def initialize(self, event_logger):
-        self.screen = pygame.display.set_mode((width, height))
+        self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         pygame.display.set_caption(WINDOW_TITLE)
         self.breakout_game = Breakout(self.screen)
         self.logger = event_logger
