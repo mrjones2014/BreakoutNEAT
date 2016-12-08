@@ -3,10 +3,6 @@
   <connection_list>
     <connection>
       <input>0</input>
-      <output>1</output>
-    </connection>
-    <connection>
-      <input>0</input>
       <output>2</output>
     </connection>
     <connection>
@@ -14,36 +10,12 @@
       <output>1</output>
     </connection>
     <connection>
-      <input>0</input>
-      <output>1</output>
-    </connection>
-    <connection>
-      <input>1</input>
-      <output>0</output>
-    </connection>
-    <connection>
       <input>1</input>
       <output>1</output>
     </connection>
     <connection>
       <input>1</input>
       <output>1</output>
-    </connection>
-    <connection>
-      <input>1</input>
-      <output>2</output>
-    </connection>
-    <connection>
-      <input>1</input>
-      <output>0</output>
-    </connection>
-    <connection>
-      <input>1</input>
-      <output>0</output>
-    </connection>
-    <connection>
-      <input>2</input>
-      <output>2</output>
     </connection>
     <connection>
       <input>2</input>
@@ -55,10 +27,22 @@
     </connection>
     <connection>
       <input>3</input>
-      <output>2</output>
+      <output>0</output>
     </connection>
     <connection>
       <input>3</input>
+      <output>0</output>
+    </connection>
+    <connection>
+      <input>3</input>
+      <output>0</output>
+    </connection>
+    <connection>
+      <input>4</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>4</input>
       <output>2</output>
     </connection>
     <connection>
@@ -67,27 +51,27 @@
     </connection>
     <connection>
       <input>4</input>
-      <output>1</output>
-    </connection>
-    <connection>
-      <input>4</input>
-      <output>1</output>
-    </connection>
-    <connection>
-      <input>4</input>
-      <output>2</output>
-    </connection>
-    <connection>
-      <input>5</input>
-      <output>2</output>
-    </connection>
-    <connection>
-      <input>5</input>
       <output>0</output>
     </connection>
     <connection>
       <input>5</input>
       <output>2</output>
+    </connection>
+    <connection>
+      <input>5</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>5</input>
+      <output>2</output>
+    </connection>
+    <connection>
+      <input>5</input>
+      <output>1</output>
+    </connection>
+    <connection>
+      <input>5</input>
+      <output>0</output>
     </connection>
   </connection_list>
 </species>

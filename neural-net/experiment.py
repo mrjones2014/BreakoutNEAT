@@ -8,6 +8,7 @@ from species import Species
 import sys
 import os
 from session_logger import SessionLogger
+from metrics import metrics_plotter
 
 
 class Experiment(object):
@@ -33,22 +34,27 @@ class Experiment(object):
         else:
             first_gen = seed_gen
         first_gen.run_and_evaluate(self.logger)
-        self.logger.log("    Average fitness in generation 0: " + DECIMAL_FORMAT_STR.format(first_gen.avg_fitness()))
+        avg_fitness = first_gen.avg_fitness()
+        self.logger.log("    Average fitness in generation 0: " + DECIMAL_FORMAT_STR.format(avg_fitness))
         first_ancestor = first_gen.epoch()
         self.logger.log("    Highest fitness in generation 0: " + DECIMAL_FORMAT_STR.format(first_gen.highest_fitness))
+        metrics_dict = Experiment.build_metrics_dict([avg_fitness, first_gen.highest_fitness])
+        SessionLogger.log_metrics(metrics_dict)
         curr_gen = first_gen.evolve_from_ancestor(first_ancestor)
         last_individual_xml = first_ancestor.to_xml_str()
         for i in range(1, NUM_GENERATIONS):
             self.logger.log("Running generation " + str(i) + "...")
             curr_gen.run_and_evaluate(self.logger)
-
+            avg_fitness = curr_gen.avg_fitness()
             self.logger.log("    Average fitness in generation " + str(i) + ": " +
-                            DECIMAL_FORMAT_STR.format(curr_gen.avg_fitness()))
+                            DECIMAL_FORMAT_STR.format(avg_fitness))
 
             next_ancestor = curr_gen.epoch()
 
             self.logger.log("    Highest fitness in generation " + str(i) + ": " +
                             DECIMAL_FORMAT_STR.format(curr_gen.highest_fitness))
+            metrics_dict = Experiment.build_metrics_dict([avg_fitness, curr_gen.highest_fitness])
+            SessionLogger.log_metrics(metrics_dict)
 
             if self.current_best_species is None or next_ancestor.fitness > self.current_best_species.fitness:
                 self.current_best_species = next_ancestor
@@ -60,6 +66,8 @@ class Experiment(object):
             self.logger.log("Writing speciation data to file: " + SPECIATION_DATA_FILE)
             Species.save_state(SPECIATION_DATA_FILE, last_individual_xml)
             self.logger.log("Done writing speciation data to file: " + SPECIATION_DATA_FILE)
+        if GENERATE_UPDATED_METRICS:
+            metrics_plotter.generate_graphs()
 
     def load_data(self, filename):
         if not filename.endswith(".species"):
@@ -76,6 +84,17 @@ class Experiment(object):
             self.logger.log("FATAL: File does not exist or is corrupted: " + filename)
             self.logger.log(str(e))
             sys.exit(-1)
+
+    @staticmethod
+    def build_metrics_dict(data_points):
+        if len(data_points) != len(METRICS_FILES):
+            logger.log("FATAL: Number of data points does not match number of metrics files.")
+            sys.exit(-1)
+        else:
+            dict = {}
+            for i in range(0, len(METRICS_FILES)):
+                dict[METRICS_FILES[i]] = data_points[i]
+            return dict
 
 if __name__ == "__main__":
     logger = SessionLogger(LOG_DIR + "events.log", True)

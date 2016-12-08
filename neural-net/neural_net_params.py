@@ -14,3 +14,6 @@ SAVE_SPECIATION_DATA = True
 LOG_DIR = "../logs/"
 WINDOW_TITLE = "BreakoutNEAT"
 DECIMAL_FORMAT_STR = '{0:.3f}'
+
+GENERATE_UPDATED_METRICS = True
+METRICS_FILES = ["../metrics/avg_fitness_per_gen.data", "../metrics/most_fit_per_gen.data"]

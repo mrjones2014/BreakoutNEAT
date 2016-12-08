@@ -18,3 +18,10 @@ class SessionLogger(object):
                 date_string = "[ " + time.strftime("%m/%d/%Y") + ", " + time.strftime("%I:%M:%S") + " ]:  "
                 logfile.write(date_string + string + os.linesep)
         print string
+
+    @staticmethod
+    def log_metrics(filename_value_dict):
+        file_names = filename_value_dict.keys()
+        for filename in file_names:
+            with open(filename, "a+") as curr_file:
+                curr_file.write(str(filename_value_dict[filename]) + os.linesep)
